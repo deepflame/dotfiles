@@ -33,12 +33,11 @@ plugins=(battery brew gem heroku knife npm osx pip vagrant rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize paths
+# Customize PATHs
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH # add Honebrew binaries in front of PATH
 export PATH=$PATH:~/.cabal/bin # adding Haskell package binaries to PATH
 export PATH=$PATH:/usr/local/share/npm/bin/ # add NPM binaries to PATH
 
-export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r17
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
 
 # To enable shims and autocompletion, add rbenv init to your profile:
