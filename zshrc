@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Example aliases
-# alias zshconfig="subl ~/.zshrc"
-# alias ohmyzshconfig="subl -n ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -32,6 +28,9 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(battery brew gem heroku knife npm osx pip vagrant rbenv)
 
 source $ZSH/oh-my-zsh.sh
+
+# Aliases
+source $HOME/.zsh/aliases
 
 # Customize PATHs
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH # add Honebrew binaries in front of PATH
