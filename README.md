@@ -12,7 +12,7 @@ Clone the repository to
   
 and run
 
-    ~/dotfiles/install
+    ~/dotfiles/install.sh
   
 ## Extending
 
