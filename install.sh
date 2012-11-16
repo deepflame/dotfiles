@@ -37,7 +37,7 @@ for file in *; do
     source_file="$SCRIPT_PATH/$file"
     target_file="$HOME/$prefix$file"
 
-    ln -sniv $source_file $target_file # s-ymbolic n-otfollow i-nteractive v-erbose
+    ln -snfv $source_file $target_file # s-ymbolic n-otfollow f-orce v-erbose
   fi
 done
 
