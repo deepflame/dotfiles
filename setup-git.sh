@@ -8,3 +8,8 @@ echo -n "Enter your email: "
 read git_user_email
 git config --global user.email $git_user_email
 
+# set vim as default editor, also fixes vim issue in osx
+git config --global core.editor /usr/bin/vim
+
+#git config --global credential.helper osxkeychain
+#git config --global credential.helper 'cache --timeout=3600'
