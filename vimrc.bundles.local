@@ -1,0 +1,4 @@
+let g:spf13_leader='\' 
+
+Bundle 'chriskempson/base16-vim'
+"Bundle 'mattn/zencoding-vim'
