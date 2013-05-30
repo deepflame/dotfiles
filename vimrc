@@ -20,6 +20,14 @@ filetype off                   " required!
 " }}
 
 
+" Color scheme {{
+    set background=dark
+
+    Bundle 'chriskempson/base16-vim'
+    colorscheme base16-default
+    let base16colorspace=256  " Access colors present in 256 colorspace
+" }}
+
 
 
 filetype plugin indent on     " required!
