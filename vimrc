@@ -1,12 +1,24 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Vundle installation
+    let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
+    if !filereadable(vundle_readme) 
+    "if !isdirectory("~/.vim/bundle/vundle")
+        echo "Installing Vundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    endif
+" end - Vundle installation
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" Vundle config
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+
+    Bundle 'gmarik/vundle'
+" end - Vundle config
+
 
 " My Bundles here:
 "
