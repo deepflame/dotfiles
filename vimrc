@@ -1,6 +1,8 @@
 " General {{
     set nocompatible               " disable vi compatibility
     filetype off                   " required for Vundle
+
+    syntax on                      " enable syntax coloring
 " }}
 
 " Vundle installation {{
