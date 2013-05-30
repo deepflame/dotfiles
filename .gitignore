@@ -2,3 +2,7 @@
 *.pyc
 *._*
 vim/bundle
+
+
+# Raspberry Pi
+bin/node* # node installation
