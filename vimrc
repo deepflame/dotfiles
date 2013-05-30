@@ -1,5 +1,7 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+" General {{
+    set nocompatible               " disable vi compatibility
+    filetype off                   " required for Vundle
+" }}
 
 " Vundle installation {{
     let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
