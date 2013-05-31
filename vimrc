@@ -2,7 +2,11 @@
     set nocompatible               " disable vi compatibility
     filetype off                   " required for Vundle
 
-    syntax on                      " enable syntax coloring
+    syntax on                      " syntax highlighting
+    set nonumber                   " no line numbers
+    set cursorline                 " cursor line highlghted
+    set hlsearch                   " highlight search results
+    set nowrap                     " do not wrap lines
 " }}
 
 " Vundle installation {{
@@ -19,7 +23,6 @@
 " Vundle config {{
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
-
     Bundle 'gmarik/vundle'
 " }}
 
