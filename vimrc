@@ -2,10 +2,17 @@
 	set nocompatible               " disable vi compatibility
 	filetype off                   " required for Vundle
 
+	" ui
 	syntax on                      " syntax highlighting
 	set nowrap                     " do not wrap lines
 	set nonumber                   " no line numbers
+	set norelativenumber
 	set cursorline                 " cursor line highlghted
+	set nolist                     " do not display invisible chars
+	set listchars=tab:▸\ ,eol:¬    " Use the same symbols as TextMate for tabstops and EOLs
+
+	set showmatch                  " show matching brackets/paranthesis
+
 	" text indentation
 	set autoindent                 " preserve indentation
 	set tabstop=4                  " display tab 4 colums wide
