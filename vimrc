@@ -1,12 +1,12 @@
 " General {{
-    set nocompatible               " disable vi compatibility
-    filetype off                   " required for Vundle
+	set nocompatible               " disable vi compatibility
+	filetype off                   " required for Vundle
 
-    syntax on                      " syntax highlighting
-    set nonumber                   " no line numbers
-    set cursorline                 " cursor line highlghted
-    set hlsearch                   " highlight search results
-    set nowrap                     " do not wrap lines
+	syntax on                      " syntax highlighting
+	set nowrap                     " do not wrap lines
+	set nonumber                   " no line numbers
+	set cursorline                 " cursor line highlghted
+	set hlsearch                   " highlight search results
 " }}
 
 " Vundle installation {{
