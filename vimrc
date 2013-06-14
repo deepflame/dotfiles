@@ -6,6 +6,13 @@
 	set nowrap                     " do not wrap lines
 	set nonumber                   " no line numbers
 	set cursorline                 " cursor line highlghted
+	" text indentation
+	set autoindent                 " preserve indentation
+	set tabstop=4                  " display tab 4 colums wide
+	set softtabstop=4
+	set shiftwidth=4
+	set noexpandtab                " do not use spaces instead of tabs
+
 	set hlsearch                   " highlight search results
 " }}
 
