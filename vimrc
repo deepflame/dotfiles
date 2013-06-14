@@ -10,28 +10,31 @@
 " }}
 
 " Vundle installation {{
-    let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-    if !filereadable(vundle_readme) 
-    "if !isdirectory("~/.vim/bundle/vundle")
-        echo "Installing Vundle.."
-        echo ""
-        silent !mkdir -p ~/.vim/bundle
-        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    endif
+	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
+	if !filereadable(vundle_readme) 
+		"if !isdirectory("~/.vim/bundle/vundle")
+		echo "Installing Vundle.."
+		echo ""
+		silent !mkdir -p ~/.vim/bundle
+		silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	endif
 " }}
 
 " Vundle config {{
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
-    Bundle 'gmarik/vundle'
+	set rtp+=~/.vim/bundle/vundle/
+	call vundle#rc()
+	Bundle 'gmarik/vundle'
 " }}
 
 
 " Color scheme {{
-    Bundle 'chriskempson/base16-vim'
-    set background=dark
-    let base16colorspace=256  " Access colors present in 256 colorspace
-    colorscheme base16-default
+	Bundle 'chriskempson/base16-vim'
+	Bundle 'w0ng/vim-hybrid'
+	set background=dark
+	let base16colorspace=256  " Access colors present in 256 colorspace
+	let g:hybrid_use_Xresources = 1
+	colorscheme hybrid
+" }}
 " }}
 
 
