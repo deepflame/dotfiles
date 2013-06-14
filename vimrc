@@ -2,6 +2,9 @@
 	set nocompatible               " disable vi compatibility
 	filetype off                   " required for Vundle
 
+	set nobackup
+	set noswapfile
+
 	" ui
 	syntax on                      " syntax highlighting
 	set nowrap                     " do not wrap lines
