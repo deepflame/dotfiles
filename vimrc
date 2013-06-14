@@ -23,6 +23,10 @@
 	set shiftwidth=4
 	set noexpandtab                " do not use spaces instead of tabs
 
+	set splitbelow
+	set splitright
+
+	" search
 	set hlsearch                   " highlight search results
 " }}
 
