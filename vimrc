@@ -40,6 +40,9 @@ filetype off                   " required by Vundle
 	Bundle 'w0ng/vim-hybrid'
 
 	Bundle 'kien/ctrlp.vim'
+
+	" coffeescript support
+	Bundle 'kchmck/vim-coffee-script'
 " }}
 
 filetype plugin indent on     " required by Vundle
