@@ -39,7 +39,14 @@ filetype off                   " required by Vundle
 	Bundle 'chriskempson/base16-vim'
 	Bundle 'w0ng/vim-hybrid'
 
+	" fuzzy finder
 	Bundle 'kien/ctrlp.vim'
+
+	" syntax check
+	Bundle 'scrooloose/syntastic'
+
+	" css colors
+	Bundle 'ap/vim-css-color'
 
 	" coffeescript support
 	Bundle 'kchmck/vim-coffee-script'
