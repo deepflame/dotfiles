@@ -60,12 +60,17 @@ filetype plugin indent on     " required by Vundle
 
 	set showmatch                  " show matching brackets/paranthesis
 
+	" color scheme
+	set background=dark
+	let g:hybrid_use_Xresources=1
+	colorscheme hybrid
+
 	" text indentation
-	set autoindent                 " preserve indentation
 	set tabstop=4                  " display tab 4 colums wide
 	set softtabstop=4
 	set shiftwidth=4
 	set noexpandtab                " do not use spaces instead of tabs
+	set noautoindent               " do not indent automatically after CR
 
 	set splitbelow
 	set splitright
@@ -73,20 +78,12 @@ filetype plugin indent on     " required by Vundle
 	" search
 	set hlsearch                   " highlight search results
 
-
+	set mouse=a                    " enable mouse in text mode
 " }}
 
+" Mappings {{
 
-" Color scheme {{
-	set background=dark
-	let base16colorspace=256  " Access colors present in 256 colorspace
-	let g:hybrid_use_Xresources = 1
-	colorscheme hybrid
 " }}
-
-
-
-filetype plugin indent on     " required!
 
 " Auto Commands {{
 if has("autocmd")
