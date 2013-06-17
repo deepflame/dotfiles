@@ -1,6 +1,19 @@
 " General {{
 	set nocompatible               " disable vi compatibility
 	filetype off                   " required for Vundle
+" Vundle setup {{
+	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
+	if !filereadable(vundle_readme) 
+		"if !isdirectory("~/.vim/bundle/vundle")
+		echo "Installing Vundle.."
+		echo ""
+		silent !mkdir -p ~/.vim/bundle
+		silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	endif
+
+	set rtp+=~/.vim/bundle/vundle/
+	call vundle#rc()
+" }}
 
 	set nobackup
 	set noswapfile
@@ -30,21 +43,7 @@
 	set hlsearch                   " highlight search results
 " }}
 
-" Vundle installation {{
-	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-	if !filereadable(vundle_readme) 
-		"if !isdirectory("~/.vim/bundle/vundle")
-		echo "Installing Vundle.."
-		echo ""
-		silent !mkdir -p ~/.vim/bundle
-		silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-	endif
-" }}
 
-" Vundle config {{
-	set rtp+=~/.vim/bundle/vundle/
-	call vundle#rc()
-	Bundle 'gmarik/vundle'
 " }}
 
 
@@ -55,7 +54,6 @@
 	let base16colorspace=256  " Access colors present in 256 colorspace
 	let g:hybrid_use_Xresources = 1
 	colorscheme hybrid
-" }}
 " }}
 
 
