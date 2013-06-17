@@ -101,6 +101,9 @@ if has("autocmd")
 
 	" Ruby files
 	autocmd BufNewFile,BufRead *file setfiletype ruby 
+
+	" Coffeescript files
+	autocmd BufNewFile,BufReadPost *.coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 endif
 " }}
 
