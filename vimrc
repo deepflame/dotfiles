@@ -56,10 +56,12 @@ filetype plugin indent on     " required by Vundle
 
 
 " General {{
+
+	" files
 	set nobackup
 	set noswapfile
 
-	" ui
+	" text ui
 	syntax on                      " syntax highlighting
 	set nowrap                     " do not wrap lines
 	set nonumber                   " no line numbers
@@ -88,6 +90,7 @@ filetype plugin indent on     " required by Vundle
 	" search
 	set hlsearch                   " highlight search results
 
+	" ui
 	set mouse=a                    " enable mouse in text mode
 " }}
 
@@ -97,9 +100,11 @@ filetype plugin indent on     " required by Vundle
 
 " Auto Commands {{
 if has("autocmd")
-	autocmd! BufWritePost .vimrc source $MYVIMRC " source the vimrc file after saving it
 
-	" Ruby files
+	" source the vimrc file after saving it
+	autocmd! BufWritePost .vimrc source $MYVIMRC
+
+	" Ruby files (e.g. Gemfile, Vagrantfile)
 	autocmd BufNewFile,BufRead *file setfiletype ruby 
 
 	" Coffeescript files
