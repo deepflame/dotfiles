@@ -1,6 +1,6 @@
-" General {{
-	set nocompatible               " disable vi compatibility
-	filetype off                   " required for Vundle
+set nocompatible               " disable vi compatibility
+filetype off                   " required by Vundle
+
 " Vundle setup {{
 	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
 	if !filereadable(vundle_readme) 
@@ -15,6 +15,37 @@
 	call vundle#rc()
 " }}
 
+" Bundles {{
+	Bundle 'gmarik/vundle'
+
+	" search with ag/ack
+	if executable('ag')
+		Bundle 'rking/ag.vim'
+	elseif executable('ack-grep') || executable('ack')
+		Bundle 'mileszs/ack.vim'
+	endif
+
+	" git support
+	if executable('git')
+		Bundle 'tpope/vim-fugitive'
+	endif
+
+	" auto completion
+	if has('python')
+		Bundle 'Valloric/YouCompleteMe'
+	endif
+
+	" color schemes
+	Bundle 'chriskempson/base16-vim'
+	Bundle 'w0ng/vim-hybrid'
+
+	Bundle 'kien/ctrlp.vim'
+" }}
+
+filetype plugin indent on     " required by Vundle
+
+
+" General {{
 	set nobackup
 	set noswapfile
 
@@ -41,15 +72,12 @@
 
 	" search
 	set hlsearch                   " highlight search results
-" }}
 
 
 " }}
 
 
 " Color scheme {{
-	Bundle 'chriskempson/base16-vim'
-	Bundle 'w0ng/vim-hybrid'
 	set background=dark
 	let base16colorspace=256  " Access colors present in 256 colorspace
 	let g:hybrid_use_Xresources = 1
