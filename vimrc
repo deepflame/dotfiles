@@ -64,7 +64,7 @@ filetype plugin indent on     " required!
 
 " Auto Commands {{
 if has("autocmd")
-	autocmd! bufwritepost .vimrc source $MYVIMRC " source the vimrc file after saving it
+	autocmd! BufWritePost .vimrc source $MYVIMRC " source the vimrc file after saving it
 
 	" Ruby files
 	autocmd BufNewFile,BufRead *file setfiletype ruby 
