@@ -75,6 +75,8 @@ filetype plugin indent on     " required by Vundle
 	" text ui
 	syntax on                      " syntax highlighting
 	set nowrap                     " do not wrap lines
+	set textwidth=0
+	set wrapmargin=0
 	set nonumber                   " no line numbers
 	set norelativenumber
 	set cursorline                 " cursor line highlghted
