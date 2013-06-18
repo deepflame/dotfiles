@@ -41,6 +41,8 @@ filetype off                   " required by Vundle
 
 	" fuzzy finder
 	Bundle 'kien/ctrlp.vim'
+	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|components$'
+
 
 	" syntax check
 	Bundle 'scrooloose/syntastic'
