@@ -1,69 +1,10 @@
 set nocompatible               " disable vi compatibility
-filetype off                   " required by Vundle
 
-" Vundle setup {{
-	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-	if !filereadable(vundle_readme) 
-		"if !isdirectory("~/.vim/bundle/vundle")
-		echo "Installing Vundle.."
-		echo ""
-		silent !mkdir -p ~/.vim/bundle
-		silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-	endif
-
-	set rtp+=~/.vim/bundle/vundle/
-	call vundle#rc()
+" Setup Plugins {{
+if filereadable(expand("~/.vim.bundles"))
+	source ~/.vim.bundles
+endif
 " }}
-
-" Bundles {{
-	Bundle 'gmarik/vundle'
-
-	" color schemes
-	Bundle 'chriskempson/base16-vim'
-	Bundle 'w0ng/vim-hybrid'
-
-	" search with ag/ack
-	if executable('ag')
-		Bundle 'rking/ag.vim'
-	elseif executable('ack-grep') || executable('ack')
-		Bundle 'mileszs/ack.vim'
-	endif
-
-	" git support
-	if executable('git')
-		Bundle 'tpope/vim-fugitive'
-	endif
-
-	" auto completion
-	if has('python')
-		Bundle 'Valloric/YouCompleteMe'
-	endif
-
-	" fuzzy finder
-	Bundle 'kien/ctrlp.vim'
-	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|components$'
-
-	" better status line
-	Bundle 'Lokaltog/vim-powerline'
-
-	" syntax check
-	Bundle 'scrooloose/syntastic'
-
-	" css colors
-	Bundle 'ap/vim-css-color'
-
-	" better javascript support
-	Bundle "pangloss/vim-javascript"
-
-	" coffeescript support
-	Bundle 'kchmck/vim-coffee-script'
-
-	" handlebars support
-	Bundle 'nono/vim-handlebars'
-" }}
-
-filetype plugin indent on     " required by Vundle
-
 
 " General {{
 
