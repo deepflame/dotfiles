@@ -101,9 +101,9 @@ filetype plugin indent on     " required by Vundle
 
 	" ui
 	set encoding=utf-8
+	set laststatus=2               " always show status line
 	set noshowmode                 " do not show vim mode (already have powerline)
 	set noshowcmd
-	set laststatus=2               " always show status line
 	set noruler                    " do not show ruler (powerline has)
 
 	set splitbelow
