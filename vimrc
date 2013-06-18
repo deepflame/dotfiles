@@ -43,6 +43,8 @@ filetype off                   " required by Vundle
 	Bundle 'kien/ctrlp.vim'
 	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|components$'
 
+	" better status line
+	Bundle 'Lokaltog/vim-powerline'
 
 	" syntax check
 	Bundle 'scrooloose/syntastic'
