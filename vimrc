@@ -50,6 +50,9 @@ filetype off                   " required by Vundle
 	" css colors
 	Bundle 'ap/vim-css-color'
 
+	" better javascript support
+	Bundle "pangloss/vim-javascript"
+
 	" coffeescript support
 	Bundle 'kchmck/vim-coffee-script'
 " }}
