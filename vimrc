@@ -57,6 +57,9 @@ filetype off                   " required by Vundle
 
 	" coffeescript support
 	Bundle 'kchmck/vim-coffee-script'
+
+	" handlebars support
+	Bundle 'nono/vim-handlebars'
 " }}
 
 filetype plugin indent on     " required by Vundle
