@@ -5,7 +5,7 @@ SCRIPT_PATH=$(cd "$(dirname "$0")"; pwd)
 cd $SCRIPT_PATH
 
 # configuration
-skip_files=( "install.sh" "setup-git.sh" "README.md" )
+skip_files=( "install.sh" "setup-git.sh" "setup-vim.sh" "README.md" )
 nodot_files=( bin )
 
 
