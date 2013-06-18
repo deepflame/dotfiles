@@ -98,6 +98,8 @@ filetype plugin indent on     " required by Vundle
 	set hlsearch                   " highlight search results
 
 	" ui
+	set noshowmode                 " do not show vim mode (already have powerline)
+	set noshowcmd
 	set mouse=a                    " enable mouse in text mode
 " }}
 
