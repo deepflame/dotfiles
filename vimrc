@@ -18,6 +18,10 @@ filetype off                   " required by Vundle
 " Bundles {{
 	Bundle 'gmarik/vundle'
 
+	" color schemes
+	Bundle 'chriskempson/base16-vim'
+	Bundle 'w0ng/vim-hybrid'
+
 	" search with ag/ack
 	if executable('ag')
 		Bundle 'rking/ag.vim'
@@ -34,10 +38,6 @@ filetype off                   " required by Vundle
 	if has('python')
 		Bundle 'Valloric/YouCompleteMe'
 	endif
-
-	" color schemes
-	Bundle 'chriskempson/base16-vim'
-	Bundle 'w0ng/vim-hybrid'
 
 	" fuzzy finder
 	Bundle 'kien/ctrlp.vim'
