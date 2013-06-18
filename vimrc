@@ -70,6 +70,7 @@ filetype plugin indent on     " required by Vundle
 	" files
 	set nobackup
 	set noswapfile
+	set hidden                     " hidden buffers without confirmation
 
 	" text ui
 	syntax on                      " syntax highlighting
@@ -77,7 +78,7 @@ filetype plugin indent on     " required by Vundle
 	set nonumber                   " no line numbers
 	set norelativenumber
 	set cursorline                 " cursor line highlghted
-	set nolist                     " do not display invisible chars
+	set list                       " display invisible chars
 	set listchars=tab:▸\ ,eol:¬    " Use the same symbols as TextMate for tabstops and EOLs
 
 	set showmatch                  " show matching brackets/paranthesis
@@ -94,17 +95,21 @@ filetype plugin indent on     " required by Vundle
 	set noexpandtab                " do not use spaces instead of tabs
 	set noautoindent               " do not indent automatically after CR
 
-	set splitbelow
-	set splitright
-
 	" search
 	set hlsearch                   " highlight search results
+	set ignorecase                 " case insensitive search, also for autocompletion
 
 	" ui
+	set encoding=utf-8
 	set noshowmode                 " do not show vim mode (already have powerline)
 	set noshowcmd
 	set laststatus=2               " always show status line
+	set noruler                    " do not show ruler (powerline has)
+
+	set splitbelow
+	set splitright
 	set mouse=a                    " enable mouse in text mode
+	set visualbell
 " }}
 
 " Mappings {{
