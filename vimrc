@@ -100,6 +100,7 @@ filetype plugin indent on     " required by Vundle
 	" ui
 	set noshowmode                 " do not show vim mode (already have powerline)
 	set noshowcmd
+	set laststatus=2               " always show status line
 	set mouse=a                    " enable mouse in text mode
 " }}
 
