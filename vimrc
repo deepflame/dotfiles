@@ -23,6 +23,7 @@ endif
 	set cursorline                 " cursor line highlghted
 	set list                       " display invisible chars
 	set listchars=tab:▸\ ,eol:¬    " Use the same symbols as TextMate for tabstops and EOLs
+	set backspace=indent,eol,start " allow backspace in more situations
 
 	set showmatch                  " show matching brackets/paranthesis
 
