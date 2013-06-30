@@ -20,6 +20,10 @@ filetype off                   " required by Vundle
 	" color scheme
 	Bundle 'w0ng/vim-hybrid'
 
+	" end wise
+	Bundle 'tpope/vim-endwise'
+	Bundle 'tpope/vim-surround'
+
 	" search with ag/ack
 	if executable('ag')
 		Bundle 'rking/ag.vim'
