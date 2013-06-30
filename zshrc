@@ -45,6 +45,3 @@ export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
 # To enable shims and autocompletion, add rbenv init to your profile:
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# correct colors for VIM
-~/bin/base16-shell/base16-default.dark.sh
-
