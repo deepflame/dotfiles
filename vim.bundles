@@ -41,6 +41,9 @@ filetype off                   " required by Vundle
 		Bundle 'Valloric/YouCompleteMe'
 	endif
 
+	" create your own text objects (dependency for ruby blocks)
+	Bundle 'kana/vim-textobj-user'
+
 	" fuzzy finder
 	Bundle 'kien/ctrlp.vim'
 	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|components$'
@@ -63,6 +66,9 @@ filetype off                   " required by Vundle
 	" handlebars support
 	Bundle 'nono/vim-handlebars'
 
+	" ruby/rails support
+	Bundle 'nelstrom/vim-textobj-rubyblock'
+	runtime macros/matchit.vim
 	" sublime text like multiple cursors
 	Bundle 'terryma/vim-multiple-cursors'
 " }}
