@@ -57,6 +57,9 @@ filetype off                   " required by Vundle
 	" css colors
 	Bundle 'ap/vim-css-color'
 
+	" stylus support
+	Bundle 'wavded/vim-stylus'
+
 	" better javascript support
 	Bundle "pangloss/vim-javascript"
 
