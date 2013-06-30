@@ -72,6 +72,9 @@ if has("autocmd")
 	" source the vimrc file after saving it
 	autocmd! BufWritePost .vimrc source $MYVIMRC
 
+    " Ruby files
+	autocmd BufNewFile,BufReadPost *.rb setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+
 	" Ruby files (e.g. Gemfile, Vagrantfile)
 	autocmd BufNewFile,BufRead *file setfiletype ruby 
 
