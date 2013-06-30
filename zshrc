@@ -33,10 +33,10 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/aliases
 
 # Customize PATHs
-export PATH=$PATH:~/.cabal/bin # adding Haskell package binaries to PATH
-export PATH=$PATH:/usr/local/share/npm/bin/ # add NPM binaries to PATH
 export PATH=/usr/local/bin:$PATH            # add Honebrew binaries in front of PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH=$PATH:$HOME/.cabal/bin          # Haskell package binaries
+export PATH=$PATH:/usr/local/share/npm/bin/ # global NPM binaries
 
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
 
