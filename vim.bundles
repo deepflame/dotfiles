@@ -17,8 +17,7 @@ filetype off                   " required by Vundle
 " Bundles {{
 	Bundle 'gmarik/vundle'
 
-	" color schemes
-	Bundle 'chriskempson/base16-vim'
+	" color scheme
 	Bundle 'w0ng/vim-hybrid'
 
 	" search with ag/ack
