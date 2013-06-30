@@ -69,6 +69,8 @@ filetype off                   " required by Vundle
 	" ruby/rails support
 	Bundle 'nelstrom/vim-textobj-rubyblock'
 	runtime macros/matchit.vim
+	Bundle 'tpope/vim-rails'
+
 	" sublime text like multiple cursors
 	Bundle 'terryma/vim-multiple-cursors'
 " }}
