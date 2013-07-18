@@ -1,0 +1,11 @@
+Vagrant.require_plugin 'vagrant-vbguest'
+Vagrant.require_plugin 'vagrant-cachier'
+
+Vagrant.configure("2") do |config|
+
+  config.vbguest.no_install = true
+  config.vbguest.auto_update = false
+
+  config.cache.auto_detect = true
+
+end
