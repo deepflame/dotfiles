@@ -6,3 +6,6 @@ vim/bundle
 
 # Raspberry Pi
 bin/node* # node installation
+
+vagrant.d/*
+!vagrant.d/Vagrantfile
