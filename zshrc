@@ -41,6 +41,7 @@ export PATH=$PATH:$HOME/.cabal/bin          # Haskell package binaries
 export PATH=$PATH:/usr/local/share/npm/bin/ # global NPM binaries
 
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
+export GOPATH=~/Developer/go
 
 # To enable shims and autocompletion, add rbenv init to your profile:
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
