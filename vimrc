@@ -33,11 +33,12 @@ endif
 	colorscheme hybrid
 
 	" text indentation
-	set tabstop=4                  " display tab 4 colums wide
-	set softtabstop=4
-	set shiftwidth=4
-	set noexpandtab                " do not use spaces instead of tabs
-	set noautoindent               " do not indent automatically after CR
+	"set tabstop=4                  " display tab 4 colums wide
+	"set softtabstop=4
+	"set shiftwidth=4
+	"set noexpandtab                " do not use spaces instead of tabs
+	"set autoindent                 " use indent from the previous line
+	"set smarttab                   " tabs according to shiftwidth
 
 	" search
 	set hlsearch                   " highlight search results
@@ -72,14 +73,9 @@ if has("autocmd")
 	" source the vimrc file after saving it
 	autocmd! BufWritePost .vimrc source $MYVIMRC
 
-	" Ruby files
-	autocmd BufNewFile,BufReadPost *.rb setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-
 	" Ruby files (e.g. Gemfile, Vagrantfile)
 	autocmd BufNewFile,BufRead *file setfiletype ruby 
 
-	" Coffeescript files
-	autocmd BufNewFile,BufReadPost *.coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 endif
 " }}
 
