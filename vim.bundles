@@ -54,6 +54,9 @@ filetype off                   " required by Vundle
 	" syntax check
 	Bundle 'scrooloose/syntastic'
 
+	" editorconfig
+	Bundle 'editorconfig/editorconfig-vim'
+
 	" css colors
 	Bundle 'ap/vim-css-color'
 
