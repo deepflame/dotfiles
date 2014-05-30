@@ -28,8 +28,6 @@ endif
 	set showmatch                  " show matching brackets/paranthesis
 
 	" color scheme
-	set background=dark
-	let g:hybrid_use_Xresources=1
 	colorscheme hybrid
 
 	" text indentation
