@@ -10,8 +10,8 @@ filetype off                   " required by Vundle
 		silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
 	endif
 
-	set rtp+=~/.vim/bundle/vundle/
-	call vundle#rc()
+	set rtp+=~/.vim/bundle/vundle
+	call vundle#begin()
 " }}
 
 " Bundles {{
@@ -81,6 +81,7 @@ filetype off                   " required by Vundle
 	Bundle 'terryma/vim-multiple-cursors'
 " }}
 
+call vundle#end()
 filetype plugin indent on     " required by Vundle
 
 " vim: set ft=vim :
