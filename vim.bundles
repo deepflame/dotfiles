@@ -63,14 +63,16 @@ filetype off                   " required by Vundle
 	" stylus support
 	Bundle 'wavded/vim-stylus'
 
-	" better javascript support
-	Bundle "pangloss/vim-javascript"
 
-	" coffeescript support
-	Bundle 'kchmck/vim-coffee-script'
 
 	" handlebars support
 	Bundle 'nono/vim-handlebars'
+
+	" better javascript support
+	Bundle 'pangloss/vim-javascript'
+	Bundle 'jelera/vim-javascript-syntax'
+	" javascript/node support
+	Bundle 'moll/vim-node'
 
 	" ruby/rails support
 	Bundle 'nelstrom/vim-textobj-rubyblock'
