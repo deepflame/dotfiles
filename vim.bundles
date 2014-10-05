@@ -26,6 +26,11 @@ filetype off                   " required by Vundle
 	Bundle 'tpope/vim-endwise'
 	Bundle 'tpope/vim-surround'
 
+	" better repeat after mapping
+	Bundle 'tpope/vim-repeat'
+	" better commenting
+	Bundle 'tpope/vim-commentary'
+
 	" search with ag/ack
 	if executable('ag')
 		Bundle 'rking/ag.vim'
