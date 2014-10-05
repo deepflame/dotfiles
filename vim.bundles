@@ -65,13 +65,23 @@ filetype off                   " required by Vundle
 	" editorconfig
 	Bundle 'editorconfig/editorconfig-vim'
 
+
+
+	" html5 support
+	Bundle 'othree/html5.vim'
+	" fast html editing
+	Bundle "mattn/emmet-vim"
+
+	" css support
+"	Bundle 'JulesWang/css.vim' " for vim < 7.4
 	" css colors
 	Bundle 'ap/vim-css-color'
-
+	" sass support
+	Bundle 'cakebaker/scss-syntax.vim'
 	" stylus support
-	Bundle 'wavded/vim-stylus'
-
-
+"	Bundle 'wavded/vim-stylus'
+	" less support
+"	Bundle 'groenewege/vim-less'
 
 	" handlebars support
 	Bundle 'nono/vim-handlebars'
@@ -81,6 +91,8 @@ filetype off                   " required by Vundle
 	Bundle 'jelera/vim-javascript-syntax'
 	" javascript/node support
 	Bundle 'moll/vim-node'
+	" coffeescript support
+"	Bundle 'kchmck/vim-coffee-script'
 
 	" ruby/rails support
 	Bundle 'vim-ruby/vim-ruby'
