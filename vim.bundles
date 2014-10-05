@@ -83,6 +83,7 @@ filetype off                   " required by Vundle
 	Bundle 'moll/vim-node'
 
 	" ruby/rails support
+	Bundle 'vim-ruby/vim-ruby'
 	Bundle 'nelstrom/vim-textobj-rubyblock'
 	runtime macros/matchit.vim
 	Bundle 'tpope/vim-rails'
