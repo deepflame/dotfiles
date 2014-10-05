@@ -19,6 +19,8 @@ filetype off                   " required by Vundle
 
 	" color scheme
 	Bundle 'w0ng/vim-hybrid'
+	Bundle 'chriskempson/base16-vim'
+	Bundle 'altercation/vim-colors-solarized'
 
 	" end wise
 	Bundle 'tpope/vim-endwise'
