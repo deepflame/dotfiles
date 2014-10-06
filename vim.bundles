@@ -72,6 +72,7 @@ filetype off                   " required by Vundle
 
 	" syntax check
 	Plugin 'scrooloose/syntastic'
+	let g:syntastic_check_on_open = 1
 
 	" editorconfig
 	Plugin 'editorconfig/editorconfig-vim'
