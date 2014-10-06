@@ -64,6 +64,7 @@ filetype off                   " required by Vundle
 	" fuzzy finder
 	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$'
 	Plugin 'kien/ctrlp.vim'
+	let g:ctrlp_working_path_mode = 'a'
 
 	" better status line
 "	Plugin 'Lokaltog/vim-powerline'
