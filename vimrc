@@ -40,6 +40,7 @@ endif
 
 	" search
 	set hlsearch                   " highlight search results
+	set incsearch                  " incrementally highlight search results
 	set ignorecase                 " case insensitive search, also for autocompletion
 
 	" ui
