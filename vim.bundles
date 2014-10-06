@@ -113,7 +113,7 @@ filetype off                   " required by Vundle
 	Plugin 'tpope/vim-rails'
 
 	" sublime text like multiple cursors
-	Bundle 'terryma/vim-multiple-cursors'
+"	Plugin 'terryma/vim-multiple-cursors'
 " }}
 
 call vundle#end()
