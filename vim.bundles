@@ -41,6 +41,9 @@ filetype off                   " required by Vundle
 	" git support
 	if executable('git')
 		Bundle 'tpope/vim-fugitive'
+		" see git diff in gutter
+		Bundle 'airblade/vim-gitgutter'
+		let g:gitgutter_enabled = 1
 	endif
 
 	" auto completion
