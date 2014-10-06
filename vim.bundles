@@ -2,7 +2,7 @@ filetype off                   " required by Vundle
 
 " Vundle setup {{
 	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-	if !filereadable(vundle_readme) 
+	if !filereadable(vundle_readme)
 		"if !isdirectory("~/.vim/bundle/vundle")
 		echo "Installing Vundle.."
 		echo ""
@@ -50,7 +50,6 @@ filetype off                   " required by Vundle
 	if has('python')
 		Bundle 'Valloric/YouCompleteMe'
 	endif
-
 	" better javascript autocompletion
 	Bundle 'marijnh/tern_for_vim'
 	let g:tern_map_keys=1
