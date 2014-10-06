@@ -75,6 +75,8 @@ filetype off                   " required by Vundle
 	" editorconfig
 	Bundle 'editorconfig/editorconfig-vim'
 
+	" Dash.app support for Mac
+	Bundle 'rizzatti/dash.vim'
 
 
 	" html5 support
