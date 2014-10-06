@@ -58,7 +58,7 @@ filetype off                   " required by Vundle
 
 	" fuzzy finder
 	Bundle 'kien/ctrlp.vim'
-	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|components$|bundle$'
+	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$'
 
 	" better status line
 "	Bundle 'Lokaltog/vim-powerline'
