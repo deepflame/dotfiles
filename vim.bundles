@@ -14,7 +14,7 @@ filetype off                   " required by Vundle
 	call vundle#begin()
 " }}
 
-" Bundles {{
+" Plugins {{
 	Plugin 'gmarik/vundle'
 
 	" color scheme
