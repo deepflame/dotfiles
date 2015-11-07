@@ -69,6 +69,9 @@ filetype off                   " required by Vundle
 	Plugin 'kien/ctrlp.vim'
 	let g:ctrlp_working_path_mode = 'a'
 
+	" better file explorer
+	Plugin 'scrooloose/nerdtree'
+
 	" better status line
 "	Plugin 'Lokaltog/vim-powerline'
 	Plugin 'bling/vim-airline'
