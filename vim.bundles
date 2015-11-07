@@ -120,6 +120,9 @@ filetype off                   " required by Vundle
 	runtime macros/matchit.vim
 	Plugin 'tpope/vim-rails'
 
+	" elixir support
+	Plugin 'elixir-lang/vim-elixir'
+
 	" sublime text like multiple cursors
 "	Plugin 'terryma/vim-multiple-cursors'
 " }}
