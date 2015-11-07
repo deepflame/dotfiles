@@ -82,6 +82,7 @@ filetype off                   " required by Vundle
 
 	" editorconfig
 	Plugin 'editorconfig/editorconfig-vim'
+	let g:EditorConfig_core_mode = 'external_command'
 
 	" Dash.app support for Mac
 	Plugin 'rizzatti/dash.vim'
