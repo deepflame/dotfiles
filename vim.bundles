@@ -107,8 +107,8 @@ filetype off                   " required by Vundle
 	Plugin 'nono/vim-handlebars'
 
 	" better javascript support
+	Plugin 'othree/yajs.vim' " es6 support
 	Plugin 'pangloss/vim-javascript'
-	Plugin 'jelera/vim-javascript-syntax'
 	" javascript/node support
 	Plugin 'moll/vim-node'
 	" coffeescript support
