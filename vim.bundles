@@ -87,7 +87,6 @@ filetype off                   " required by Vundle
 	" Dash.app support for Mac
 	Plugin 'rizzatti/dash.vim'
 
-
 	" html5 support
 	Plugin 'othree/html5.vim'
 	" fast html editing
