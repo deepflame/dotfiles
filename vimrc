@@ -73,7 +73,7 @@ if has("autocmd")
 	autocmd! BufWritePost .vimrc source $MYVIMRC
 
 	" Ruby files (e.g. Gemfile, Vagrantfile)
-	autocmd BufNewFile,BufRead *file setfiletype ruby 
+	autocmd BufNewFile,BufRead *file setfiletype ruby
 
 endif
 " }}
