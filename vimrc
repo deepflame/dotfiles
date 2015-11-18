@@ -28,7 +28,7 @@ endif
 	set showmatch                  " show matching brackets/paranthesis
 
 	" color scheme
-	colorscheme hybrid
+	colorscheme solarized
 
 	" text indentation
 	"set tabstop=4                  " display tab 4 colums wide
