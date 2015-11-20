@@ -30,7 +30,7 @@ endif
 	" color scheme
 	colorscheme solarized
 
-	" text indentation
+	" text indentation (managed by editorconfig)
 	"set tabstop=4                  " display tab 4 colums wide
 	"set softtabstop=4
 	"set shiftwidth=4
