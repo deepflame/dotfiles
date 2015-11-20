@@ -70,7 +70,7 @@ filetype off                   " required by Vundle
 	Plugin 'kana/vim-textobj-user'
 
 	" fuzzy finder
-	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$'
+	let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle|cache|tmp|temp$'
 	Plugin 'kien/ctrlp.vim'
 	let g:ctrlp_working_path_mode = 'a'
 
