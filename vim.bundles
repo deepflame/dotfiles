@@ -48,9 +48,7 @@ filetype off                   " required by Vundle
 	" git support
 	if executable('git')
 		Plugin 'tpope/vim-fugitive'
-		" see git diff in gutter
-		Plugin 'airblade/vim-gitgutter'
-		let g:gitgutter_enabled = 1
+		Plugin 'airblade/vim-gitgutter' " see git diff in gutter
 	endif
 
 	" auto completion
@@ -80,8 +78,8 @@ filetype off                   " required by Vundle
 	Plugin 'scrooloose/nerdtree'
 
 	" better status line
-"	Plugin 'Lokaltog/vim-powerline'
 	Plugin 'bling/vim-airline'
+"	Plugin 'Lokaltog/vim-powerline'
 
 	" syntax check
 	Plugin 'scrooloose/syntastic'
