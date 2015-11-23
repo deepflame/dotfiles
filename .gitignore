@@ -1,12 +1,15 @@
 .DS_Store
 *.pyc
 *._*
-vim/bundle
 
 # Vagrant
 vagrant.d
 !vagrant.d/Vagrantfile
 
 # Vim
+vim/bundle
 vim/.netrwhist
 
+# tmux
+tmux/plugins
+!tmux/plugins/tpm
