@@ -3,7 +3,7 @@
 source $HOME/.zsh/plugins.zsh
 
 # Aliases
-source $HOME/.zsh/aliases
+source $HOME/.zsh/aliases.zsh
 
 # Customize PATHs
 export PATH=/usr/local/bin:$PATH            # add Honebrew binaries in front of PATH
