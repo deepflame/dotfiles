@@ -3,9 +3,9 @@
 *._*
 vim/bundle
 
-
 # Raspberry Pi
 bin/node* # node installation
 
-vagrant.d/*
-!vagrant.d/Vagrantfile
+# Vagrant
+vagrant.d/* # ignore Vagrant folder
+!vagrant.d/Vagrantfile # do not ignore Vagrant config
