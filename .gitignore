@@ -3,12 +3,9 @@
 *._*
 vim/bundle
 
-# Raspberry Pi
-bin/node* # node installation
-
 # Vagrant
-vagrant.d/* # ignore Vagrant folder
-!vagrant.d/Vagrantfile # do not ignore Vagrant config
+vagrant.d
+!vagrant.d/Vagrantfile
 
 # Vim
 vim/.netrwhist
