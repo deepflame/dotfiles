@@ -1,8 +1,6 @@
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# Plugins
+source $HOME/.zsh/plugins.zsh
 
 # Aliases
 source $HOME/.zsh/aliases
