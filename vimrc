@@ -43,6 +43,12 @@ endif
 	set incsearch                  " incrementally highlight search results
 	set ignorecase                 " case insensitive search, also for autocompletion
 
+	" folding
+	set foldmethod=indent          "fold based on indent
+	set foldnestmax=10             "deepest fold is 10 levels
+	set nofoldenable               "dont fold by default
+	set foldlevel=1
+
 	" ui
 	set encoding=utf-8
 	set laststatus=2               " always show status line
