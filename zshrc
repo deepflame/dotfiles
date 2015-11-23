@@ -9,7 +9,7 @@ source $HOME/.zsh/aliases.zsh
 export PATH=/usr/local/bin:$PATH            # add Honebrew binaries in front of PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=./bin:$PATH                     # local bin directory for bundler binstubs (attention!)
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin                 # ~/bin directory
 export PATH=$PATH:$HOME/.cabal/bin          # Haskell package binaries
 export PATH=$PATH:/usr/local/share/npm/bin  # global NPM binaries
 
