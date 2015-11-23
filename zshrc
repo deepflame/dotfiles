@@ -19,3 +19,6 @@ export GOPATH=~/Developer/go
 # To enable shims and autocompletion, add rbenv init to your profile:
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# set Docker env
+eval "$(docker-machine env dev)"
+
