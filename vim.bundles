@@ -29,14 +29,11 @@ filetype off                   " required by Vundle
 	let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 	"let g:EditorConfig_core_mode = 'external_command'
 
-	" end wise
+	" misc tpope plugins
+	Plugin 'tpope/vim-commentary' " comment stuff out (e.g. gcc)
 "	Plugin 'tpope/vim-endwise'
+	Plugin 'tpope/vim-repeat' " better repeat after mapping
 	Plugin 'tpope/vim-surround'
-
-	" better repeat after mapping
-	Plugin 'tpope/vim-repeat'
-	" better commenting
-	Plugin 'tpope/vim-commentary'
 
 	" search with ag/ack
 	if executable('ag')
