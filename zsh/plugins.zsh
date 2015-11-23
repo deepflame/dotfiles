@@ -12,3 +12,5 @@ antigen bundle sindresorhus/pure
 # apply antigen settings
 antigen apply
 
+# other plugins (non antigen)
+source $HOME/dotfiles/z/z.sh
