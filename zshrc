@@ -16,7 +16,12 @@ export PATH=$PATH:/usr/local/share/npm/bin  # global NPM binaries
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
 export GOPATH=~/Developer/go
 
-# To enable shims and autocompletion, add rbenv init to your profile:
+# Tooling
+
+# travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# rbenv shims and autocompletion
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # set Docker env
