@@ -96,6 +96,8 @@ filetype off                   " required by Vundle
 	" handlebars support
 	Plugin 'mustache/vim-mustache-handlebars'
 	let g:mustache_abbreviations = 1 " enable abbeviations
+	" slim support
+	Plugin 'slim-template/vim-slim'
 
 	" css support
 "	Plugin 'JulesWang/css.vim' " for vim < 7.4
