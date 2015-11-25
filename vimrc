@@ -27,6 +27,9 @@ endif
 
 	set showmatch                  " show matching brackets/paranthesis
 
+	set history=200                " command history size
+	set undolevels=1000            " number of undo steps
+
 	" color scheme
 	colorscheme solarized
 
