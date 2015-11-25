@@ -56,6 +56,8 @@ endif
 	set noshowcmd
 	set noruler                    " do not show ruler (powerline has)
 
+	set clipboard=unnamed          " easy clipboard (yank to system clipboard)
+
 	" mouse
 	set mouse=a                    " enable mouse in text mode
 	set ttymouse=xterm2            " fix mouse in tmux
