@@ -56,9 +56,12 @@ endif
 	set noshowcmd
 	set noruler                    " do not show ruler (powerline has)
 
+	" mouse
+	set mouse=a                    " enable mouse in text mode
+	set ttymouse=xterm2            " fix mouse in tmux
+
 	set splitbelow
 	set splitright
-	set mouse=a                    " enable mouse in text mode
 	set visualbell
 " }}
 
