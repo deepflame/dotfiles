@@ -51,6 +51,10 @@ export GOPATH=~/Developer/go
 # rbenv shims and autocompletion
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # set Docker env
 eval "$(docker-machine env dev)"
 
