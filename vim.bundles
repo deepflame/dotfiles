@@ -27,7 +27,6 @@ filetype off                   " required by Vundle
 	" editorconfig
 	Plugin 'editorconfig/editorconfig-vim'
 	let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-	"let g:EditorConfig_core_mode = 'external_command'
 
 	" misc tpope plugins
 	Plugin 'tpope/vim-commentary' " comment stuff out (e.g. gcc)
@@ -114,9 +113,6 @@ filetype off                   " required by Vundle
 "	Plugin 'wavded/vim-stylus'
 	" less support
 "	Plugin 'groenewege/vim-less'
-
-	" handlebars support
-	Plugin 'nono/vim-handlebars'
 
 	" better javascript support
 	Plugin 'othree/yajs.vim' " es6 support
