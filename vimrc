@@ -31,7 +31,10 @@ endif
 	set undolevels=1000            " number of undo steps
 
 	" color scheme
-	colorscheme solarized
+	set t_Co=256                   " enable 256 color mode
+	let g:solarized_termcolors=256 " fix solarized colors in xterm
+	colorscheme solarized          " set color theme
+	set background=light           " tell vim we use a light background
 
 	" text indentation (managed by editorconfig)
 	"set tabstop=4                  " display tab 4 colums wide
