@@ -29,6 +29,12 @@ else
 	alias ls="ls -G"
 fi
 
+# remap caps lock to ctrl
+if [[ "$(uname -s)" = "Linux" ]]; then
+	setxkbmap -option caps:ctrl_modifier
+fi
+
+
 # Aliases
 source $HOME/.zsh/aliases.zsh
 
