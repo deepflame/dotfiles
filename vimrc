@@ -65,8 +65,10 @@ endif
 	set clipboard=unnamed          " easy clipboard (yank to system clipboard)
 
 	" mouse
-	set mouse=a                    " enable mouse in text mode
-	set ttymouse=xterm2            " fix mouse in tmux
+	if !has('nvim')
+		set mouse=a                    " enable mouse in text mode
+		set ttymouse=xterm2            " fix mouse in tmux
+	endif
 
 	set splitbelow
 	set splitright
