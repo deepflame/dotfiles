@@ -20,7 +20,7 @@ endif
 	set wrapmargin=0
 	set nonumber                   " no line numbers
 	set norelativenumber
-	set cursorline                 " cursor line highlghted
+	set nocursorline               " no cursor line highlghted for better performance
 	set list                       " display invisible chars
 	set listchars=tab:▸\ ,eol:¬    " Use the same symbols as TextMate for tabstops and EOLs
 	set backspace=indent,eol,start " allow backspace in more situations
