@@ -49,6 +49,8 @@ export PATH=$PATH:/usr/local/share/npm/bin  # global NPM binaries
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
 export GOPATH=~/Developer/go
 
+export GEM_EDITOR='vim'
+
 # Tooling
 
 # travis gem
