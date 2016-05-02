@@ -1,4 +1,12 @@
 .DS_Store
 .svn
+.git
 *~
 .*.swp
+node_modules
+bower_components
+build
+dist
+tmp
+temp
+vendor
