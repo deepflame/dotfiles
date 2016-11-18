@@ -115,47 +115,25 @@ filetype off                   " required by Vundle
   " Dash.app support for Mac
   Plugin 'rizzatti/dash.vim'
 
-  " html5 support
-  Plugin 'othree/html5.vim'
-  " fast html editing
-  Plugin 'mattn/emmet-vim'
-  " handlebars support
-  Plugin 'mustache/vim-mustache-handlebars'
+  " multi language support
+  Plugin 'sheerun/vim-polyglot'
+
+  " ployglot: handlebars config
   let g:mustache_abbreviations = 1 " enable abbeviations
-  " slim support
-  Plugin 'slim-template/vim-slim'
-
-  " css support
-  "	Plugin 'JulesWang/css.vim' " for vim < 7.4
-  " css colors
-  Plugin 'ap/vim-css-color'
-  " sass support
-  Plugin 'cakebaker/scss-syntax.vim'
-  " stylus support
-  "	Plugin 'wavded/vim-stylus'
-  " less support
-  "	Plugin 'groenewege/vim-less'
-
-  " better javascript support
-  Plugin 'othree/yajs.vim' " es6 support
-  Plugin 'pangloss/vim-javascript'
-  " javascript/node support
-  Plugin 'moll/vim-node'
-  " coffeescript support
-  "	Plugin 'kchmck/vim-coffee-script'
-  " React JSX suppoer
+  " ployglot: React JSX config
   let g:jsx_ext_required = 0 " default 1
   let g:jsx_pragma_required = 0 " default 0
-  Plugin 'mxw/vim-jsx'
+
+  " fast html editing
+  Plugin 'mattn/emmet-vim'
+
+  " css colors
+  Plugin 'ap/vim-css-color'
 
   " ruby/rails support
-  Plugin 'vim-ruby/vim-ruby'
   Plugin 'nelstrom/vim-textobj-rubyblock'
   runtime macros/matchit.vim
   Plugin 'tpope/vim-rails'
-
-  " elixir support
-  Plugin 'elixir-lang/vim-elixir'
 
   " sublime text like multiple cursors
   "	Plugin 'terryma/vim-multiple-cursors'
