@@ -1,138 +1,164 @@
 filetype off                   " required by Vundle
 
 " Vundle setup {{
-	let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
-	if !filereadable(vundle_readme)
-		"if !isdirectory("~/.vim/bundle/vundle")
-		echo "Installing Vundle.."
-		echo ""
-		silent !mkdir -p ~/.vim/bundle
-		silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-	endif
+  let vundle_readme=expand("~/.vim/bundle/vundle/README.md")
+  if !filereadable(vundle_readme)
+    "if !isdirectory("~/.vim/bundle/vundle")
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  endif
 
-	set rtp+=~/.vim/bundle/vundle
-	call vundle#begin()
+  set rtp+=~/.vim/bundle/vundle
+  call vundle#begin()
 " }}
 
 " Plugins {{
-	Plugin 'gmarik/vundle'
+  Plugin 'gmarik/vundle'
 
-	let mapleader = ","
+  let mapleader = ","
 
-	" color schemes
-	Plugin 'w0ng/vim-hybrid'
-	Plugin 'chriskempson/base16-vim'
-	Plugin 'altercation/vim-colors-solarized'
+  " color schemes
+  Plugin 'w0ng/vim-hybrid'
+  Plugin 'chriskempson/base16-vim'
+  Plugin 'altercation/vim-colors-solarized'
 
-	" editorconfig
-	Plugin 'editorconfig/editorconfig-vim'
-	let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+  " editorconfig
+  Plugin 'editorconfig/editorconfig-vim'
+  let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-	" misc tpope plugins
-	Plugin 'tpope/vim-commentary' " comment stuff out (e.g. gcc)
-"	Plugin 'tpope/vim-endwise'
-	Plugin 'tpope/vim-repeat' " better repeat after mapping
-	Plugin 'tpope/vim-surround'
+  " misc tpope plugins
+  Plugin 'tpope/vim-commentary' " comment stuff out (e.g. gcc)
+  " Plugin 'tpope/vim-endwise'
+  Plugin 'tpope/vim-repeat' " better repeat after mapping
+  Plugin 'tpope/vim-surround'
 
-	" search with ag/ack
-	if executable('ag')
-		Plugin 'rking/ag.vim'
-	elseif executable('ack-grep') || executable('ack')
-		Plugin 'mileszs/ack.vim'
-	endif
+  " search with ag/ack
+  if executable('ag')
+    Plugin 'rking/ag.vim'
+  elseif executable('ack-grep') || executable('ack')
+    Plugin 'mileszs/ack.vim'
+  endif
 
-	" git support
-	if executable('git')
-		Plugin 'tpope/vim-fugitive'
-		Plugin 'airblade/vim-gitgutter' " see git diff in gutter
-	endif
+  " git support
+  if executable('git')
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'airblade/vim-gitgutter' " see git diff in gutter
+  endif
 
-	" auto completion
-	if has('python')
-		Plugin 'Valloric/YouCompleteMe'
-		let g:ycm_autoclose_preview_window_after_completion=1
-		let g:ycm_autoclose_preview_window_after_insertion=1
-	endif
-	" better javascript autocompletion
-	Plugin 'marijnh/tern_for_vim'
-	let g:tern_map_keys=1
-	let g:tern_show_argument_hints='on_move'
-	let g:tern_show_argument_hints='on_hold'
+  " auto completion
+  if has('python')
+    Plugin 'Valloric/YouCompleteMe'
+    let g:ycm_autoclose_preview_window_after_completion=1
+    let g:ycm_autoclose_preview_window_after_insertion=1
+  endif
+  " better javascript autocompletion
+  Plugin 'marijnh/tern_for_vim'
+  let g:tern_map_keys=1
+  let g:tern_show_argument_hints='on_move'
+  let g:tern_show_argument_hints='on_hold'
 
-	" auto-completion for quotes, parens, brackets
-	Plugin 'Raimondi/delimitMate'
+  " auto-completion for quotes, parens, brackets
+  Plugin 'Raimondi/delimitMate'
 
-	" create your own text objects (dependency for ruby blocks)
-	Plugin 'kana/vim-textobj-user'
+  " create your own text objects (dependency for ruby blocks)
+  Plugin 'kana/vim-textobj-user'
 
-	" fuzzy finder
-	Plugin 'kien/ctrlp.vim'
-	let g:ctrlp_working_path_mode = 'a' " search starting current directory
-	if executable('ag')
-		let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " use ag for lightning fast search
-		let g:ctrlp_use_caching = 0 " no need for caching because ag is fast enough
-	else
-		let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$|cache$|tmp$|temp$|_build$'
-	endif
+  " fuzzy finder
+  Plugin 'kien/ctrlp.vim'
+  let g:ctrlp_working_path_mode = '' " don't be smart about working dir
+  if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " use ag for lightning fast search
+    let g:ctrlp_use_caching = 0 " no need for caching because ag is fast enough
+  else
+    let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$|cache$|tmp$|temp$|_build$'
+  endif
 
-	" better file explorer
-	Plugin 'scrooloose/nerdtree'
+  " better file explorer
+  Plugin 'scrooloose/nerdtree'
 
-	" better status line
-	Plugin 'bling/vim-airline'
-"	Plugin 'Lokaltog/vim-powerline'
+  " better status line
+  Plugin 'bling/vim-airline'
+  "	Plugin 'Lokaltog/vim-powerline'
 
-	" syntax check
-	Plugin 'scrooloose/syntastic'
-	let g:syntastic_check_on_open = 1
+  " syntax check
+  Plugin 'scrooloose/syntastic'
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_javascript_checkers = ['eslint']
+  let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
-	" tmux
-	Plugin 'tmux-plugins/vim-tmux' " syntax hightlighting
-	Plugin 'tmux-plugins/vim-tmux-focus-events' " better focus in tmux
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
 
-	" Dash.app support for Mac
-	Plugin 'rizzatti/dash.vim'
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_loc_list_height = 5
+  let g:syntastic_auto_loc_list = 0
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 1
 
-	" html5 support
-	Plugin 'othree/html5.vim'
-	" fast html editing
-	Plugin 'mattn/emmet-vim'
-	" handlebars support
-	Plugin 'mustache/vim-mustache-handlebars'
-	let g:mustache_abbreviations = 1 " enable abbeviations
-	" slim support
-	Plugin 'slim-template/vim-slim'
+  "let g:syntastic_error_symbol = '❌'
+  "let g:syntastic_style_error_symbol = '⁉️'
+  "let g:syntastic_warning_symbol = '⚠️'
+  "let g:syntastic_style_warning_symbol = '💩'
 
-	" css support
-"	Plugin 'JulesWang/css.vim' " for vim < 7.4
-	" css colors
-	Plugin 'ap/vim-css-color'
-	" sass support
-	Plugin 'cakebaker/scss-syntax.vim'
-	" stylus support
-"	Plugin 'wavded/vim-stylus'
-	" less support
-"	Plugin 'groenewege/vim-less'
+  highlight link SyntasticErrorSign SignColumn
+  highlight link SyntasticWarningSign SignColumn
+  highlight link SyntasticStyleErrorSign SignColumn
+  highlight link SyntasticStyleWarningSign SignColumn
 
-	" better javascript support
-	Plugin 'othree/yajs.vim' " es6 support
-	Plugin 'pangloss/vim-javascript'
-	" javascript/node support
-	Plugin 'moll/vim-node'
-	" coffeescript support
-"	Plugin 'kchmck/vim-coffee-script'
+  " tmux
+  Plugin 'tmux-plugins/vim-tmux' " syntax hightlighting
+  Plugin 'tmux-plugins/vim-tmux-focus-events' " better focus in tmux
 
-	" ruby/rails support
-	Plugin 'vim-ruby/vim-ruby'
-	Plugin 'nelstrom/vim-textobj-rubyblock'
-	runtime macros/matchit.vim
-	Plugin 'tpope/vim-rails'
+  " Dash.app support for Mac
+  Plugin 'rizzatti/dash.vim'
 
-	" elixir support
-	Plugin 'elixir-lang/vim-elixir'
+  " html5 support
+  Plugin 'othree/html5.vim'
+  " fast html editing
+  Plugin 'mattn/emmet-vim'
+  " handlebars support
+  Plugin 'mustache/vim-mustache-handlebars'
+  let g:mustache_abbreviations = 1 " enable abbeviations
+  " slim support
+  Plugin 'slim-template/vim-slim'
 
-	" sublime text like multiple cursors
-"	Plugin 'terryma/vim-multiple-cursors'
+  " css support
+  "	Plugin 'JulesWang/css.vim' " for vim < 7.4
+  " css colors
+  Plugin 'ap/vim-css-color'
+  " sass support
+  Plugin 'cakebaker/scss-syntax.vim'
+  " stylus support
+  "	Plugin 'wavded/vim-stylus'
+  " less support
+  "	Plugin 'groenewege/vim-less'
+
+  " better javascript support
+  Plugin 'othree/yajs.vim' " es6 support
+  Plugin 'pangloss/vim-javascript'
+  " javascript/node support
+  Plugin 'moll/vim-node'
+  " coffeescript support
+  "	Plugin 'kchmck/vim-coffee-script'
+  " React JSX suppoer
+  let g:jsx_ext_required = 0 " default 1
+  let g:jsx_pragma_required = 0 " default 0
+  Plugin 'mxw/vim-jsx'
+
+  " ruby/rails support
+  Plugin 'vim-ruby/vim-ruby'
+  Plugin 'nelstrom/vim-textobj-rubyblock'
+  runtime macros/matchit.vim
+  Plugin 'tpope/vim-rails'
+
+  " elixir support
+  Plugin 'elixir-lang/vim-elixir'
+
+  " sublime text like multiple cursors
+  "	Plugin 'terryma/vim-multiple-cursors'
 " }}
 
 call vundle#end()
