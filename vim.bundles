@@ -130,6 +130,10 @@ filetype off                   " required by Vundle
   " css colors
   Plugin 'ap/vim-css-color'
 
+  " phoenix support
+  Plugin 'c-brenn/phoenix.vim'
+  Plugin 'tpope/vim-projectionist' " required for some navigation features
+
   " ruby/rails support
   Plugin 'nelstrom/vim-textobj-rubyblock'
   runtime macros/matchit.vim
