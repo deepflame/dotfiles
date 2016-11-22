@@ -1,3 +1,5 @@
+--fields=+l
+
 --exclude=.git
 --exclude=.hg
 --exclude=log
