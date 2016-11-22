@@ -47,6 +47,10 @@ filetype off                   " required by Vundle
     Plugin 'airblade/vim-gitgutter' " see git diff in gutter
   endif
 
+  " ctag support
+  Plugin 'ludovicchabant/vim-gutentags'
+  let g:gutentags_cache_dir = '~/.tags_cache'
+
   " auto completion
   if has('python')
     Plugin 'Valloric/YouCompleteMe'
