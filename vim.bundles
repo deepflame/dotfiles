@@ -53,16 +53,11 @@ filetype off                   " required by Vundle
 
   " auto completion
   if has('python')
-    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe' " install with './install.py --tern-completer'
     let g:ycm_autoclose_preview_window_after_completion=1
     let g:ycm_autoclose_preview_window_after_insertion=1
     let g:ycm_collect_identifiers_from_tags_files=1
   endif
-  " better javascript autocompletion
-  Plugin 'marijnh/tern_for_vim'
-  let g:tern_map_keys=1
-  let g:tern_show_argument_hints='on_move'
-  let g:tern_show_argument_hints='on_hold'
 
   " auto-completion for quotes, parens, brackets
   Plugin 'Raimondi/delimitMate'
