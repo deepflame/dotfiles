@@ -107,7 +107,6 @@ filetype off                   " required by Vundle
 
   " better status line
   Plugin 'bling/vim-airline'
-  "	Plugin 'Lokaltog/vim-powerline'
 
   " syntax check
   Plugin 'scrooloose/syntastic'
