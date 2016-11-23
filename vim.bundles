@@ -51,6 +51,33 @@ filetype off                   " required by Vundle
   Plugin 'ludovicchabant/vim-gutentags'
   let g:gutentags_cache_dir = '~/.tags_cache'
 
+  " file overview
+  Plugin 'majutsushi/tagbar'
+  let g:tagbar_type_elixir = {
+      \ 'ctagstype' : 'elixir',
+      \ 'kinds' : [
+          \ 'f:functions',
+          \ 'functions:functions',
+          \ 'c:callbacks',
+          \ 'd:delegates',
+          \ 'e:exceptions',
+          \ 'i:implementations',
+          \ 'a:macros',
+          \ 'o:operators',
+          \ 'm:modules',
+          \ 'p:protocols',
+          \ 'r:records'
+      \ ]
+  \ }
+  let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+        \ 'h:Heading_L1',
+        \ 'i:Heading_L2',
+        \ 'k:Heading_L3'
+    \ ]
+  \ }
+
   " auto completion
   if has('python')
     Plugin 'Valloric/YouCompleteMe' " install with './install.py --tern-completer'
