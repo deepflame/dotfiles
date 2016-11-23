@@ -13,3 +13,6 @@ vim/.netrwhist
 # tmux
 tmux/plugins
 !tmux/plugins/tpm
+
+# Ruby Bundler
+/bundle/cache
