@@ -5,6 +5,8 @@
 --exclude=log
 --exclude=tmp
 --exclude=dist
+--exclude=cordova
+--exclude=node_modules
 
 --languages=-javascript,sql
 
