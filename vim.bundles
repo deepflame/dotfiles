@@ -102,6 +102,9 @@ filetype off                   " required by Vundle
     let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$|cache$|tmp$|temp$|_build$'
   endif
 
+  " auto change workdir
+  Plugin 'airblade/vim-rooter'
+
   " better file explorer
   Plugin 'scrooloose/nerdtree'
 
