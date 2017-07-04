@@ -1,8 +1,14 @@
 set nocompatible               " disable vi compatibility
 
 " Setup Plugins {{
-if filereadable(expand("~/.vim.bundles"))
-	source ~/.vim.bundles
+if v:version < 800
+  if filereadable(expand("~/.vim.bundles"))
+    source ~/.vim.bundles
+  endif
+else
+  if filereadable(expand("~/.vim.pack"))
+    source ~/.vim.pack
+  endif
 endif
 " }}
 

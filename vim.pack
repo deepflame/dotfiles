@@ -1,0 +1,170 @@
+" minpac init
+packadd minpac
+call minpac#init()
+
+" minpac commands
+command! PackUpdate source $MYVIMRC | call minpac#update()
+command! PackClean  source $MYVIMRC | call minpac#clean()
+
+let mapleader = ","
+
+" color schemes
+"call minpac#add('w0ng/vim-hybrid')
+"call minpac#add('chriskempson/base16-vim')
+call minpac#add('altercation/vim-colors-solarized')
+
+" editorconfig
+call minpac#add('editorconfig/editorconfig-vim')
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" misc tpope plugins
+call minpac#add('tpope/vim-commentary') " comment stuff out (e.g. gcc)
+" call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-repeat') " better repeat after mapping
+call minpac#add('tpope/vim-surround')
+
+" search with ag/ack
+if executable('ag')
+  call minpac#add('rking/ag.vim')
+elseif executable('ack-grep') || executable('ack')
+  call minpac#add('mileszs/ack.vim')
+endif
+
+" git support
+if executable('git')
+  call minpac#add('tpope/vim-fugitive')
+  call minpac#add('airblade/vim-gitgutter') " see git diff in gutter
+endif
+
+" ctag support
+call minpac#add('ludovicchabant/vim-gutentags')
+let g:gutentags_cache_dir = '~/.tags_cache'
+
+" file overview
+call minpac#add('majutsushi/tagbar')
+let g:tagbar_type_elixir = {
+      \ 'ctagstype' : 'elixir',
+      \ 'kinds' : [
+      \ 'f:functions',
+      \ 'functions:functions',
+      \ 'c:callbacks',
+      \ 'd:delegates',
+      \ 'e:exceptions',
+      \ 'i:implementations',
+      \ 'a:macros',
+      \ 'o:operators',
+      \ 'm:modules',
+      \ 'p:protocols',
+      \ 'r:records'
+      \ ]
+      \ }
+let g:tagbar_type_markdown = {
+      \ 'ctagstype' : 'markdown',
+      \ 'kinds' : [
+      \ 'h:Heading_L1',
+      \ 'i:Heading_L2',
+      \ 'k:Heading_L3'
+      \ ]
+      \ }
+
+" auto completion
+if has('python')
+  "call minpac#add('Valloric/YouCompleteMe', {'do': {-> system('git submodule update --init --recursive && install.py --tern-completer')}})
+  "call minpac#add('Valloric/YouCompleteMe')
+  let g:ycm_autoclose_preview_window_after_completion=1
+  let g:ycm_autoclose_preview_window_after_insertion=1
+  let g:ycm_collect_identifiers_from_tags_files=1
+
+  if !exists("g:ycm_semantic_triggers")
+    let g:ycm_semantic_triggers = {}
+  endif
+  let g:ycm_semantic_triggers['typescript'] = ['.']
+endif
+
+" auto-completion for quotes, parens, brackets
+call minpac#add('Raimondi/delimitMate')
+
+" create your own text objects (dependency for ruby blocks)
+call minpac#add('kana/vim-textobj-user')
+
+" fuzzy finder
+call minpac#add('kien/ctrlp.vim')
+let g:ctrlp_working_path_mode = '' " don't be smart about working dir
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " use ag for lightning fast search
+  let g:ctrlp_use_caching = 0 " no need for caching because ag is fast enough
+else
+  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|node_modules$|bower_components$|bundle$|cache$|tmp$|temp$|\_build$'
+endif
+
+" auto change workdir
+call minpac#add('airblade/vim-rooter')
+
+" better file explorer
+call minpac#add('scrooloose/nerdtree')
+
+" better status line
+call minpac#add('bling/vim-airline')
+
+" syntax check
+call minpac#add('scrooloose/syntastic')
+let g:syntastic_check_on_open = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+"let g:syntastic_error_symbol = '❌'
+"let g:syntastic_style_error_symbol = '⁉️'
+"let g:syntastic_warning_symbol = '⚠️'
+"let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
+" tmux
+call minpac#add('tmux-plugins/vim-tmux') " syntax hightlighting
+call minpac#add('tmux-plugins/vim-tmux-focus-events') " better focus in tmux
+
+" Dash.app support for Mac
+call minpac#add('rizzatti/dash.vim')
+
+" multi language support
+call minpac#add('sheerun/vim-polyglot')
+
+" ployglot: handlebars config
+let g:mustache_abbreviations = 1 " enable abbeviations
+" ployglot: React JSX config
+let g:jsx_ext_required = 0 " default 1
+let g:jsx_pragma_required = 0 " default 0
+
+" fast html editing
+call minpac#add('mattn/emmet-vim')
+
+" css colors
+call minpac#add('ap/vim-css-color')
+
+" phoenix support
+call minpac#add('c-brenn/phoenix.vim')
+call minpac#add('tpope/vim-projectionist') " required for some navigation features
+
+" ruby/rails support
+call minpac#add('nelstrom/vim-textobj-rubyblock')
+runtime macros/matchit.vim
+call minpac#add('tpope/vim-rails')
+
+" sublime text like multiple cursors
+"	call minpac#add('terryma/vim-multiple-cursors')
+" }}
+
+" vim: set ft=vim :
