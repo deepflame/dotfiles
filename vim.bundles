@@ -20,8 +20,8 @@ filetype off                   " required by Vundle
   let mapleader = ","
 
   " color schemes
-  Plugin 'w0ng/vim-hybrid'
-  Plugin 'chriskempson/base16-vim'
+  "Plugin 'w0ng/vim-hybrid'
+  "Plugin 'chriskempson/base16-vim'
   Plugin 'altercation/vim-colors-solarized'
 
   " editorconfig
