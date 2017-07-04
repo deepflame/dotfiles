@@ -34,6 +34,11 @@ if [[ "$(uname -s)" = "Linux" ]]; then
 	setxkbmap -option caps:ctrl_modifier
 fi
 
+# configure history
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+setopt sharehistory
+setopt extendedhistory
 
 # Aliases
 source $HOME/.zsh/aliases.zsh
