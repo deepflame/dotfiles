@@ -16,3 +16,10 @@ tmux/plugins
 
 # Ruby Bundler
 /bundle/cache
+
+# Config
+/config
+/config/!nvim
+
+# Vim minpac
+/vim/pack/minpac/start
