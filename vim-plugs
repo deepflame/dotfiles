@@ -67,7 +67,7 @@ let g:tagbar_type_markdown = {
 \ }
 
 " auto completion
-"if has('python') || has('python3')
+if has('python') || has('python3')
   function! BuildYCM(info)
     " info is a dictionary with 3 fields
     " - name:   name of the plugin
@@ -87,7 +87,7 @@ let g:tagbar_type_markdown = {
     let g:ycm_semantic_triggers = {}
   endif
   let g:ycm_semantic_triggers['typescript'] = ['.']
-"endif
+endif
 
 " auto-completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
