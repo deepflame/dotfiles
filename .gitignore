@@ -8,6 +8,7 @@ vagrant.d
 
 # Vim
 vim/bundle
+vim/plugged
 vim/.netrwhist
 
 # tmux
