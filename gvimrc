@@ -6,3 +6,7 @@
     set background=light
     colorscheme solarized
 " }}
+
+" UI {{
+    set guioptions+=e.  " show tabs
+" }}
