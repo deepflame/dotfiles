@@ -1,76 +1,84 @@
-" minpac init
-packadd minpac
-call minpac#init()
-
-" minpac commands
-command! PackUpdate source $MYVIMRC | call minpac#update()
-command! PackClean  source $MYVIMRC | call minpac#clean()
+"call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 let mapleader = ","
 
 " color schemes
-"call minpac#add('w0ng/vim-hybrid')
-"call minpac#add('chriskempson/base16-vim')
-call minpac#add('altercation/vim-colors-solarized')
+Plug 'altercation/vim-colors-solarized'
 
 " editorconfig
-call minpac#add('editorconfig/editorconfig-vim')
+Plug 'editorconfig/editorconfig-vim'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-" misc tpope plugins
-call minpac#add('tpope/vim-commentary') " comment stuff out (e.g. gcc)
-" call minpac#add('tpope/vim-endwise')
-call minpac#add('tpope/vim-repeat') " better repeat after mapping
-call minpac#add('tpope/vim-surround')
+" misc tpope Plugs
+Plug 'tpope/vim-commentary' " comment stuff out (e.g. gcc)
+" Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat' " better repeat after mapping
+Plug 'tpope/vim-surround'
 
 " search with ag/ack
-if executable('ag')
-  call minpac#add('rking/ag.vim')
-elseif executable('ack-grep') || executable('ack')
-  call minpac#add('mileszs/ack.vim')
+if executable('ack-grep') || executable('ack')
+  Plug 'mileszs/ack.vim'
+  cnoreabbrev Ack Ack!
+elseif executable('ag')
+  Plug 'mileszs/ack.vim'
+  let g:ackprg = 'ag --vimgrep --smart-case'
+  cnoreabbrev ag Ack!
+  cnoreabbrev aG Ack!
+  cnoreabbrev Ag Ack!
+  cnoreabbrev AG Ack!
 endif
 
 " git support
 if executable('git')
-  call minpac#add('tpope/vim-fugitive')
-  call minpac#add('airblade/vim-gitgutter') " see git diff in gutter
+  Plug 'tpope/vim-fugitive'
+  "Plug 'airblade/vim-gitgutter' " see git diff in gutter
 endif
 
 " ctag support
-call minpac#add('ludovicchabant/vim-gutentags')
+"Plug 'ludovicchabant/vim-gutentags'
 let g:gutentags_cache_dir = '~/.tags_cache'
 
 " file overview
-call minpac#add('majutsushi/tagbar')
+"Plug 'majutsushi/tagbar'
 let g:tagbar_type_elixir = {
-      \ 'ctagstype' : 'elixir',
-      \ 'kinds' : [
-      \ 'f:functions',
-      \ 'functions:functions',
-      \ 'c:callbacks',
-      \ 'd:delegates',
-      \ 'e:exceptions',
-      \ 'i:implementations',
-      \ 'a:macros',
-      \ 'o:operators',
-      \ 'm:modules',
-      \ 'p:protocols',
-      \ 'r:records'
-      \ ]
-      \ }
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records'
+    \ ]
+\ }
 let g:tagbar_type_markdown = {
-      \ 'ctagstype' : 'markdown',
-      \ 'kinds' : [
+  \ 'ctagstype' : 'markdown',
+  \ 'kinds' : [
       \ 'h:Heading_L1',
       \ 'i:Heading_L2',
       \ 'k:Heading_L3'
-      \ ]
-      \ }
+  \ ]
+\ }
 
 " auto completion
-if has('python')
-  "call minpac#add('Valloric/YouCompleteMe', {'do': {-> system('git submodule update --init --recursive && install.py --tern-completer')}})
-  "call minpac#add('Valloric/YouCompleteMe')
+"if has('python') || has('python3')
+  function! BuildYCM(info)
+    " info is a dictionary with 3 fields
+    " - name:   name of the plugin
+    " - status: 'installed', 'updated', or 'unchanged'
+    " - force:  set on PlugInstall! or PlugUpdate!
+    if a:info.status == 'installed' || a:info.force
+      !./install.py --js-completer
+    endif
+  endfunction
+
+  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
   let g:ycm_autoclose_preview_window_after_completion=1
   let g:ycm_autoclose_preview_window_after_insertion=1
   let g:ycm_collect_identifiers_from_tags_files=1
@@ -79,16 +87,16 @@ if has('python')
     let g:ycm_semantic_triggers = {}
   endif
   let g:ycm_semantic_triggers['typescript'] = ['.']
-endif
+"endif
 
 " auto-completion for quotes, parens, brackets
-call minpac#add('Raimondi/delimitMate')
+Plug 'Raimondi/delimitMate'
 
 " create your own text objects (dependency for ruby blocks)
-call minpac#add('kana/vim-textobj-user')
+Plug 'kana/vim-textobj-user'
 
 " fuzzy finder
-call minpac#add('kien/ctrlp.vim')
+Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = '' " don't be smart about working dir
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " use ag for lightning fast search
@@ -98,16 +106,16 @@ else
 endif
 
 " auto change workdir
-call minpac#add('airblade/vim-rooter')
+Plug 'airblade/vim-rooter'
 
 " better file explorer
-call minpac#add('scrooloose/nerdtree')
+Plug 'scrooloose/nerdtree'
 
 " better status line
-call minpac#add('bling/vim-airline')
+Plug 'bling/vim-airline'
 
 " syntax check
-call minpac#add('scrooloose/syntastic')
+Plug 'scrooloose/syntastic'
 let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
@@ -133,14 +141,14 @@ highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
 " tmux
-call minpac#add('tmux-plugins/vim-tmux') " syntax hightlighting
-call minpac#add('tmux-plugins/vim-tmux-focus-events') " better focus in tmux
+Plug 'tmux-Plugs/vim-tmux' " syntax hightlighting
+Plug 'tmux-Plugs/vim-tmux-focus-events' " better focus in tmux
 
 " Dash.app support for Mac
-call minpac#add('rizzatti/dash.vim')
+Plug 'rizzatti/dash.vim'
 
 " multi language support
-call minpac#add('sheerun/vim-polyglot')
+Plug 'sheerun/vim-polyglot'
 
 " ployglot: handlebars config
 let g:mustache_abbreviations = 1 " enable abbeviations
@@ -149,22 +157,24 @@ let g:jsx_ext_required = 0 " default 1
 let g:jsx_pragma_required = 0 " default 0
 
 " fast html editing
-call minpac#add('mattn/emmet-vim')
+Plug 'mattn/emmet-vim'
 
 " css colors
-call minpac#add('ap/vim-css-color')
+Plug 'ap/vim-css-color'
 
 " phoenix support
-call minpac#add('c-brenn/phoenix.vim')
-call minpac#add('tpope/vim-projectionist') " required for some navigation features
+Plug 'c-brenn/phoenix.vim'
+Plug 'tpope/vim-projectionist' " required for some navigation features
 
 " ruby/rails support
-call minpac#add('nelstrom/vim-textobj-rubyblock')
+Plug 'nelstrom/vim-textobj-rubyblock'
 runtime macros/matchit.vim
-call minpac#add('tpope/vim-rails')
+Plug 'tpope/vim-rails'
 
 " sublime text like multiple cursors
-"	call minpac#add('terryma/vim-multiple-cursors')
-" }}
+"	Plug 'terryma/vim-multiple-cursors'
 
-" vim: set ft=vim :
+" Initialize plugin system
+call plug#end()
+
+" vi:syntax=vim
