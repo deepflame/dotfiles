@@ -96,7 +96,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'kana/vim-textobj-user'
 
 " fuzzy finder
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = '' " don't be smart about working dir
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""' " use ag for lightning fast search
