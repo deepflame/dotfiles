@@ -152,8 +152,8 @@ else
 endif
 
 " tmux
-Plug 'tmux-Plugs/vim-tmux' " syntax hightlighting
-Plug 'tmux-Plugs/vim-tmux-focus-events' " better focus in tmux
+"Plug 'tmux-Plugs/vim-tmux' " syntax hightlighting
+"Plug 'tmux-Plugs/vim-tmux-focus-events' " better focus in tmux
 
 " Dash.app support for Mac
 Plug 'rizzatti/dash.vim'

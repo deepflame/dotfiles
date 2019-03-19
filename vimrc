@@ -31,7 +31,12 @@ source ~/.vim-plugs
 	set background=light           " tell vim we use a light background
 	set t_Co=256                   " enable 256 color mode
 	let g:solarized_termcolors=256 " fix solarized colors in xterm
-	colorscheme solarized          " set color theme
+
+	try
+	  colorscheme solarized          " set color theme
+	catch /^Vim\%((\a\+)\)\=:E185/
+	  colorscheme default
+	endtry
 
 	" text indentation (managed by editorconfig)
 	"set tabstop=4                  " display tab 4 colums wide
