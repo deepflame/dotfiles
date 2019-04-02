@@ -66,28 +66,26 @@ let g:tagbar_type_markdown = {
   \ ]
 \ }
 
-" auto completion
-if has('python') || has('python3')
-  function! BuildYCM(info)
-    " info is a dictionary with 3 fields
-    " - name:   name of the plugin
-    " - status: 'installed', 'updated', or 'unchanged'
-    " - force:  set on PlugInstall! or PlugUpdate!
-    if a:info.status == 'installed' || a:info.force
-      !./install.py --js-completer
-    endif
-  endfunction
-
-  Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-  let g:ycm_autoclose_preview_window_after_completion=1
-  let g:ycm_autoclose_preview_window_after_insertion=1
-  let g:ycm_collect_identifiers_from_tags_files=1
-
-  if !exists("g:ycm_semantic_triggers")
-    let g:ycm_semantic_triggers = {}
-  endif
-  let g:ycm_semantic_triggers['typescript'] = ['.']
+" auto complete (deoplete)
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+let g:LanguageClient_serverCommands = {
+    \ 'ruby': ['solargraph', 'stdio']
+    \ }
+Plug 'junegunn/fzf'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+elseif has('python3')
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+let g:deoplete#enable_at_startup = 1
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " auto-completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
