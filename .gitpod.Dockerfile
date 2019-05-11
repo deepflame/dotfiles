@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 USER gitpod
 # Apply user-specific settings
 
-ENV TERM="xterm-256color"
+#ENV TERM="xterm-256color"
 
 # Give back control
 USER root
