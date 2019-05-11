@@ -3,6 +3,7 @@ image:
 
 tasks:
   - prebuild: ./install.sh && vim -E -s +PlugInstall +qall
+  - init: ./install.sh
 
 github:
   prebuilds:
