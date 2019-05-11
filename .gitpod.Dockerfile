@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
 
 USER gitpod
 # Apply user-specific settings
-# ENV ...
+
+ENV TERM="xterm-256color" # fix tmux 256 colors
 
 # Give back control
 USER root
