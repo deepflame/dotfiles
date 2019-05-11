@@ -37,6 +37,11 @@ for file in *; do
     source_file="$SCRIPT_PATH/$file"
     target_file="$HOME/$prefix$file"
 
+    # backup if not a symlink
+    if [ ! -L "$target_file" ]; then
+      mv $target_file $target_file.dotfiles_backup
+    fi
+
     ln -snfv $source_file $target_file # s-ymbolic n-otfollow f-orce v-erbose
   fi
 done
