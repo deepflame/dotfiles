@@ -2,8 +2,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - prebuild: ./install.sh && vim -E -s +PlugInstall +qall
-  - init: ./install.sh
+  - prebuild: ./install.sh && vim +PlugInstall +qall > /dev/null
+  - init: ./install.sh && vim +PlugInstall +qall > /dev/null
+  - command: ./install.sh
 
 github:
   prebuilds:
