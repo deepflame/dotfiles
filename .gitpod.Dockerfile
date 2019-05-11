@@ -7,6 +7,7 @@ RUN add-apt-repository ppa:neovim-ppa/stable
 RUN apt-get update && apt-get install -y \
         lazygit \
         neovim \
+        silversearcher-ag \
         tmux \
         vim \
     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
