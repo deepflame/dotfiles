@@ -2,6 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
+  - before: gem install tmuxinator
   - init: ./install.sh && vim +PlugInstall +qall > /dev/null
   - command: ./install.sh
 

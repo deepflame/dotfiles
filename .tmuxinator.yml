@@ -1,0 +1,13 @@
+name: dotfiles
+
+windows:
+- editor:
+    layout: main-horizontal
+    panes:
+      - nvim
+      -
+- git:
+    layout: main-horizontal
+    panes:
+      - lazygit
+      -
