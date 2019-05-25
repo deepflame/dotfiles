@@ -169,7 +169,7 @@ endif
 "Plug 'tmux-Plugs/vim-tmux-focus-events' " better focus in tmux
 
 " Dash.app support for Mac
-Plug 'rizzatti/dash.vim'
+"Plug 'rizzatti/dash.vim'
 
 " multi language support
 Plug 'sheerun/vim-polyglot'
