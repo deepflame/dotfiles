@@ -1,7 +1,7 @@
 set nocompatible               " disable vi compatibility
 
 " Setup Plugins {{
-source ~/.vim-plugs
+source ~/.vim-plugs.vim
 
 " General {{
 

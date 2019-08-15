@@ -5,6 +5,8 @@ let mapleader = ","
 
 " color schemes
 Plug 'altercation/vim-colors-solarized'
+Plug 'changyuheng/color-scheme-holokai-for-vim'
+Plug 'chriskempson/base16-vim'
 
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
@@ -74,32 +76,10 @@ Plug 'rhysd/vim-crystal'
 " language support - terraform
 Plug 'hashivim/vim-terraform'
 
-" auto complete
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-let g:LanguageClient_serverCommands = {
-    \ 'ruby': ['solargraph', 'stdio']
-    \ }
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-elseif has('python3')
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" autocomplete
+source ~/.vim-plugs-coc.vim
 
-" autocomplete - Javascript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-
-" autocomplete - Terraform
-Plug 'juliosueiras/vim-terraform-completion'
-
-" auto-completion for quotes, parens, brackets
+" completion for quotes, parens, brackets
 Plug 'Raimondi/delimitMate'
 
 " create your own text objects (dependency for ruby blocks)
@@ -200,12 +180,5 @@ Plug 'tpope/vim-rails'
 
 " Initialize plugin system
 call plug#end()
-
-" Init terraform autocomplete
-call deoplete#custom#option('omni_patterns', {
-\ 'complete_method': 'omnifunc',
-\ 'terraform': '[^ *\t"{=$]\w*',
-\})
-call deoplete#initialize()
 
 " vi:syntax=vim
