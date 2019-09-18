@@ -160,8 +160,8 @@ let g:mustache_abbreviations = 1 " enable abbeviations
 let g:jsx_ext_required = 0 " default 1
 let g:jsx_pragma_required = 0 " default 0
 
-" fast html editing
-Plug 'mattn/emmet-vim'
+" fast html editing (now done with coc.vim)
+"Plug 'mattn/emmet-vim'
 
 " css colors
 Plug 'ap/vim-css-color'
