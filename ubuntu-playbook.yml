@@ -1,0 +1,24 @@
+---
+
+- name: Setup Dev environment on Ubuntu
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - apt_repository:
+        repo: ppa:lazygit-team/release
+        state: present
+
+    - name: Install packages
+      apt:
+        pkg:
+          - git
+          - vim
+          - zsh
+        update_cache: yes
+        cache_valid_time: 3600
+        state: latest
+
+    - name: Install Chrome
+      apt:
+        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
