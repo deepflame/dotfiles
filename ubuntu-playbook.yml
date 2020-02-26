@@ -5,8 +5,14 @@
   connection: local
   tasks:
 
-    - apt_repository:
+    - name: Add Lazygit repo
+      apt_repository:
         repo: ppa:lazygit-team/release
+        state: present
+
+    - name: Add Neovim repo
+      apt_repository:
+        repo: ppa:neovim-ppa/stable
         state: present
 
     - name: Install packages
@@ -14,6 +20,9 @@
         pkg:
           - git
           - vim
+          - neovim
+          - lazygit
+          - tmux
           - zsh
         update_cache: yes
         cache_valid_time: 3600
