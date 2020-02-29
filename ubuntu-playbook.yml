@@ -15,6 +15,23 @@
         repo: ppa:neovim-ppa/stable
         state: present
 
+    - name: Add Postgresql signing key
+      apt_key:
+        url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+        state: present
+
+    - name: Add Postgresql repo
+      apt_repository:
+        repo: deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg main
+        filename: pgdg
+        state: present
+
+    - name: Add Google Chrome repo
+      apt_repository:
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+        filename: google-chrome
+        state: present
+
     - name: Install packages
       apt:
         pkg:
@@ -24,10 +41,21 @@
           - lazygit
           - tmux
           - zsh
+          - postgresql-12
+          - libpq-dev
+          - pgadmin4
+          - google-chrome-stable
         update_cache: yes
         cache_valid_time: 3600
         state: latest
 
-    - name: Install Chrome
-      apt:
-        deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - name: Map capslock to ctrl key (bash)
+      lineinfile:
+        path: ~/.bashrc
+        line: setxkbmap -option caps:ctrl_modifier
+
+    - name: Map capslock to ctrl key (zsh)
+      lineinfile:
+        path: ~/.zshrc
+        line: setxkbmap -option caps:ctrl_modifier
+
