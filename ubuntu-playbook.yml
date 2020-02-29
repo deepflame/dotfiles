@@ -15,6 +15,17 @@
         repo: ppa:neovim-ppa/stable
         state: present
 
+    - name: Add Yarn signing key
+      apt_key:
+        url: https://dl.yarnpkg.com/debian/pubkey.gpg
+        state: present
+
+    - name: Add Yarn repo
+      apt_repository:
+        repo: deb https://dl.yarnpkg.com/debian/ stable main
+        filename: yarn
+        state: present
+
     - name: Add Postgresql signing key
       apt_key:
         url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
@@ -44,6 +55,7 @@
           - postgresql-12
           - libpq-dev
           - pgadmin4
+          - yarn
           - google-chrome-stable
         update_cache: yes
         cache_valid_time: 3600
