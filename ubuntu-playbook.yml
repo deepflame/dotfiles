@@ -61,6 +61,16 @@
         cache_valid_time: 3600
         state: latest
 
+    - name: Install kubectl
+      command: sudo snap install kubectl --classic
+      args:
+        creates: /snap/bin/kubectl
+
+    - name: Install Helm 3
+      command: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+      args:
+        creates: /usr/local/bin/helm
+
     - name: Map capslock to ctrl key (bash)
       lineinfile:
         path: ~/.bashrc
