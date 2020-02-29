@@ -15,6 +15,11 @@
         repo: ppa:neovim-ppa/stable
         state: present
 
+    - name: Add Git repo
+      apt_repository:
+        repo: ppa:git-core/ppa
+        state: present
+
     - name: Add Yarn signing key
       apt_key:
         url: https://dl.yarnpkg.com/debian/pubkey.gpg
