@@ -42,6 +42,17 @@
         filename: pgdg
         state: present
 
+    - name: Add Crystal Lang signing key
+      apt_key:
+        url: https://keybase.io/crystal/pgp_keys.asc
+        state: present
+
+    - name: Add Crystal Lang repo
+      apt_repository:
+        repo: deb https://dist.crystal-lang.org/apt crystal main
+        filename: crystal
+        state: present
+
     - name: Add Google Chrome repo
       apt_repository:
         repo: deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -61,6 +72,7 @@
           - libpq-dev
           - pgadmin4
           - yarn
+#         - crystal
           - google-chrome-stable
         update_cache: yes
         cache_valid_time: 3600
