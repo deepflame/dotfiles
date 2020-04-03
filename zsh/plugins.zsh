@@ -5,6 +5,9 @@ source $HOME/dotfiles/antigen/antigen.zsh
 antigen bundle zsh-users/zsh-syntax-highlighting # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-completions src # add more zsh completions
 
+# add kubectx/kubens scripts
+#antigen bundle unixorn/kubectx-zshplugin
+
 # use 'pure'  prompt
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure

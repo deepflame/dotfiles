@@ -1,0 +1,100 @@
+---
+
+- name: Setup Dev environment on Ubuntu
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Add Lazygit repo
+      apt_repository:
+        repo: ppa:lazygit-team/release
+        state: present
+
+    - name: Add Neovim repo
+      apt_repository:
+        repo: ppa:neovim-ppa/stable
+        state: present
+
+    - name: Add Git repo
+      apt_repository:
+        repo: ppa:git-core/ppa
+        state: present
+
+    - name: Add Yarn signing key
+      apt_key:
+        url: https://dl.yarnpkg.com/debian/pubkey.gpg
+        state: present
+
+    - name: Add Yarn repo
+      apt_repository:
+        repo: deb https://dl.yarnpkg.com/debian/ stable main
+        filename: yarn
+        state: present
+
+    - name: Add Postgresql signing key
+      apt_key:
+        url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+        state: present
+
+    - name: Add Postgresql repo
+      apt_repository:
+        repo: deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg main
+        filename: pgdg
+        state: present
+
+    - name: Add Crystal Lang signing key
+      apt_key:
+        url: https://keybase.io/crystal/pgp_keys.asc
+        state: present
+
+    - name: Add Crystal Lang repo
+      apt_repository:
+        repo: deb https://dist.crystal-lang.org/apt crystal main
+        filename: crystal
+        state: present
+
+    - name: Add Google Chrome repo
+      apt_repository:
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+        filename: google-chrome
+        state: present
+
+    - name: Install packages
+      apt:
+        pkg:
+          - git
+          - vim
+          - neovim
+          - lazygit
+          - tmux
+          - zsh
+          - postgresql-12
+          - libpq-dev
+          - pgadmin4
+          - yarn
+#         - crystal
+          - google-chrome-stable
+        update_cache: yes
+        cache_valid_time: 3600
+        state: latest
+
+    - name: Install kubectl
+      command: sudo snap install kubectl --classic
+      args:
+        creates: /snap/bin/kubectl
+
+    - name: Install Helm 3
+      command: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+      args:
+        creates: /usr/local/bin/helm
+
+    - name: Map capslock to ctrl key (bash)
+      lineinfile:
+        path: ~/.bashrc
+        line: setxkbmap -option caps:ctrl_modifier
+
+    - name: Map capslock to ctrl key (zsh)
+      lineinfile:
+        path: ~/.zshrc
+        line: setxkbmap -option caps:ctrl_modifier
+
