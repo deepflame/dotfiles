@@ -72,6 +72,10 @@ export NVM_DIR="$HOME/.nvm"
 # set Docker env
 #eval "$(docker-machine env dev)"
 
-source <(kubectl completion zsh)
+# add kubectl completion
+[ -x "$(command -v kubectl)" ] && source <(kubectl completion zsh)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 setxkbmap -option caps:ctrl_modifier
+
