@@ -1,19 +1,52 @@
 # enable plugin manager
-source $HOME/dotfiles/antigen/antigen.zsh
+source $HOME/.zplug/init.zsh
 
 # add plugins
-antigen bundle zsh-users/zsh-syntax-highlighting # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-completions src # add more zsh completions
+zplug "zsh-users/zsh-completions" # add more zsh completions
+zplug "zsh-users/zsh-syntax-highlighting", defer:2 # Syntax highlighting bundle.
 
 # add kubectx/kubens scripts
-#antigen bundle unixorn/kubectx-zshplugin
+#zplug "unixorn/kubectx-zshplugin"
 
 # use 'pure'  prompt
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", as:theme
 
-# apply antigen settings
-antigen apply
+zplug "astefanutti/kubebox", \
+    from:gh-r, \
+    as:command, \
+    rename-to:kubebox
+
+zplug "rancher/cli", \
+    from:gh-r, \
+    as:command, \
+    rename-to:rancher
+
+zplug "junegunn/fzf-bin", \
+    from:gh-r, \
+    as:command, \
+    rename-to:fzf, \
+    use:"*linux*amd64*"
+
+zplug "stedolan/jq", \
+    from:gh-r, \
+    as:command, \
+    rename-to:jq
+
+# Load "emoji-cli" if "jq" is installed
+zplug "b4b4r07/emoji-cli", \
+    on:"stedolan/jq"
 
 # other plugins (non antigen)
-source $HOME/dotfiles/z/z.sh
+#source $HOME/dotfiles/z/z.sh
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+#zplug load --verbose
+zplug load
