@@ -29,7 +29,6 @@ fi
 if [[ "$(uname -s)" = "Linux" ]]; then
 	setxkbmap -option caps:ctrl_modifier
 fi
-setxkbmap -option caps:ctrl_modifier
 
 # configure history
 HISTFILE=~/.zhistory
@@ -38,7 +37,14 @@ setopt sharehistory
 setopt extendedhistory
 
 # Aliases
-source $HOME/.zsh/aliases.zsh
+alias vagrant='nocorrect vagrant'
+alias grunt='nocorrect grunt'
+
+alias cdd="cd ~/Developer"
+
+alias dco="docker-compose"
+alias d="docker"
+alias k="kubectl"
 
 # Customize PATHs
 export PATH=/usr/local/bin:$PATH            # add Honebrew binaries in front of PATH
@@ -50,31 +56,27 @@ export PATH=$PATH:/usr/local/share/npm/bin  # global NPM binaries
 export PATH="$HOME/.rbenv/bin:$PATH"        # rbenv
 export PATH="${PATH}:${HOME}/.krew/bin"
 
-
+export EDITOR='nvim'
+export GEM_EDITOR='nvim'
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
-export GOPATH=~/Developer/go
-
-export GEM_EDITOR='vim'
 
 # Tooling
 
 # travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-# rbenv shims and autocompletion
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-# set Docker env
-#eval "$(docker-machine env dev)"
-
-# add kubectl completion
-[ -x "$(command -v kubectl)" ] && source <(kubectl completion zsh)
-
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# rbenv shims and autocompletion
+[ -x "$(command -v rbenv)" ] && eval "$(rbenv init -)"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# kubectl autocompletion
+[ -x "$(command -v kubectl)" ] && source <(kubectl completion zsh)
 
 
 # Plugins
