@@ -62,6 +62,8 @@
     - name: Install packages
       apt:
         pkg:
+          - curl
+          - wget
           - git
           - vim
           - neovim
@@ -85,18 +87,14 @@
       args:
         creates: /snap/bin/kubectl
 
-    - name: Install Helm 3
-      command: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-      args:
-        creates: /usr/local/bin/helm
+    # FIXME:
+#   - name: Install Helm 3
+#     command: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+#     args:
+#       creates: /usr/local/bin/helm
 
     - name: Map capslock to ctrl key (bash)
       lineinfile:
         path: ~/.bashrc
-        line: setxkbmap -option caps:ctrl_modifier
-
-    - name: Map capslock to ctrl key (zsh)
-      lineinfile:
-        path: ~/.zshrc
         line: setxkbmap -option caps:ctrl_modifier
 
