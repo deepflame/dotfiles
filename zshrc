@@ -1,7 +1,3 @@
-
-# Plugins
-source $HOME/.zsh/plugins.zsh
-
 # Functions
 
 ## Checks if a name is a command, function, or alias.¬
@@ -33,6 +29,7 @@ fi
 if [[ "$(uname -s)" = "Linux" ]]; then
 	setxkbmap -option caps:ctrl_modifier
 fi
+setxkbmap -option caps:ctrl_modifier
 
 # configure history
 HISTFILE=~/.zhistory
@@ -51,6 +48,8 @@ export PATH=$PATH:$HOME/bin                 # ~/bin directory
 export PATH=$PATH:$HOME/.cabal/bin          # Haskell package binaries
 export PATH=$PATH:/usr/local/share/npm/bin  # global NPM binaries
 export PATH="$HOME/.rbenv/bin:$PATH"        # rbenv
+export PATH="${PATH}:${HOME}/.krew/bin"
+
 
 export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH # using Homebrew Python
 export GOPATH=~/Developer/go
@@ -77,5 +76,7 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-setxkbmap -option caps:ctrl_modifier
+
+# Plugins
+source $HOME/.zsh/plugins.zsh
 
