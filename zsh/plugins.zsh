@@ -1,7 +1,9 @@
-# enable plugin manager
-source $HOME/.zplug/init.zsh
 
-# add plugins
+# enable zplug
+export ZPLUG_HOME=$HOME/.zplug
+[ ! -d "$ZPLUG_HOME" ] && git clone https://github.com/zplug/zplug $ZPLUG_HOME
+source $ZPLUG_HOME/init.zsh
+
 zplug "zsh-users/zsh-completions" # add more zsh completions
 zplug "zsh-users/zsh-syntax-highlighting", defer:2 # Syntax highlighting bundle.
 
@@ -10,7 +12,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2 # Syntax highlighting bundle.
 
 # use 'pure'  prompt
 zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure", as:theme
+zplug "sindresorhus/pure", use:pure.zsh, as:theme
 
 zplug "astefanutti/kubebox", \
     from:gh-r, \
@@ -33,12 +35,12 @@ zplug "stedolan/jq", \
     as:command, \
     rename-to:jq
 
-# Load "emoji-cli" if "jq" is installed
+# emoji-cli
 zplug "b4b4r07/emoji-cli", \
     on:"stedolan/jq"
 
-# other plugins (non antigen)
-#source $HOME/dotfiles/z/z.sh
+# z - jump around
+zplug "rupa/z", use:z.sh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
