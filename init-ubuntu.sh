@@ -9,4 +9,5 @@ sudo apt-get install -y ansible
 sudo ansible-playbook ubuntu-playbook.yml
 
 # set Zsh as default shell
+echo "Enter your password to change the default shell:"
 chsh -s $(which zsh)
