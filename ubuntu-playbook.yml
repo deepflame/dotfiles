@@ -62,18 +62,22 @@
     - name: Install packages
       apt:
         pkg:
+          - curl
+          - wget
           - git
           - vim
           - neovim
           - lazygit
           - tmux
           - zsh
+          # for zplug
+          - gawk
           - postgresql-12
           - libpq-dev
           - pgadmin4
           - yarn
 #         - crystal
-          - google-chrome-stable
+#         - google-chrome-stable
         update_cache: yes
         cache_valid_time: 3600
         state: latest
@@ -83,18 +87,14 @@
       args:
         creates: /snap/bin/kubectl
 
-    - name: Install Helm 3
-      command: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
-      args:
-        creates: /usr/local/bin/helm
+    # FIXME:
+#   - name: Install Helm 3
+#     command: curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+#     args:
+#       creates: /usr/local/bin/helm
 
     - name: Map capslock to ctrl key (bash)
       lineinfile:
         path: ~/.bashrc
-        line: setxkbmap -option caps:ctrl_modifier
-
-    - name: Map capslock to ctrl key (zsh)
-      lineinfile:
-        path: ~/.zshrc
         line: setxkbmap -option caps:ctrl_modifier
 
