@@ -35,6 +35,11 @@ zplug "stedolan/jq", \
     as:command, \
     rename-to:jq
 
+zplug "denoland/deno", \
+    from:gh-r, \
+    as:command, \
+    use:"*x86_64*linux*"
+
 # emoji-cli
 zplug "b4b4r07/emoji-cli", \
     on:"stedolan/jq"
