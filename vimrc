@@ -94,6 +94,9 @@ set shortmess+=c
 	noremap <C-k>  <C-w>k
 	noremap <C-l>  <C-w>l
 
+	tnoremap <leader><Esc> <C-\><C-n>
+"	tnoremap <C-Esc> <C-\><C-n>
+
 " }}
 
 " Auto Commands {{
