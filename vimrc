@@ -103,7 +103,7 @@ set shortmess+=c
 if has("autocmd")
 
 	" source the vimrc file after saving it
-	autocmd! BufWritePost .vimrc source $MYVIMRC
+"	autocmd! BufWritePost .vimrc source $MYVIMRC
 
 	" Ruby files (e.g. Gemfile, Vagrantfile)
 	autocmd BufNewFile,BufRead *file setfiletype ruby
