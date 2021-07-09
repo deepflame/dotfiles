@@ -38,7 +38,6 @@ set shortmess+=c
 
 	" color scheme
 	set background=light           " tell vim we use a light background
-	set t_Co=256                   " enable 256 color mode
 	let g:solarized_termcolors=256 " fix solarized colors in xterm
 
 	try
