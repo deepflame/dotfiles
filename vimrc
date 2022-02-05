@@ -13,6 +13,7 @@ set shortmess+=c	" don't give |ins-completion-menu| messages.
 set nobackup
 set noswapfile
 set hidden                     " hidden buffers without confirmation
+set encoding=UTF-8
 
 " text ui
 syntax on                      " syntax highlighting
@@ -33,8 +34,6 @@ set undolevels=1000            " number of undo steps
 
 " color scheme
 set background=light           " tell vim we use a light background
-set t_Co=256                   " enable 256 color mode
-let g:solarized_termcolors=256 " fix solarized colors in xterm
 
 " text indentation (managed by editorconfig)
 set tabstop=4                  " display tab 4 colums wide
@@ -124,7 +123,7 @@ endif
 call plug#begin(data_dir . '/plugins')
 
 source ~/dotfiles/vim-plugins/airline.vim
-source ~/dotfiles/vim-plugins/editorconfig.vim	" 
+source ~/dotfiles/vim-plugins/editorconfig.vim	"
 source ~/dotfiles/vim-plugins/fugitive.vim		" git integration
 source ~/dotfiles/vim-plugins/nerdtree.vim		" tree explorer
 source ~/dotfiles/vim-plugins/polyglot.vim		" collection of language packs
