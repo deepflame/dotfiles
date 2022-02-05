@@ -1,5 +1,8 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-":CocInstall coc-tsserver
+":CocInstall coc-tsserver coc-tailwindcss
+
+"Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

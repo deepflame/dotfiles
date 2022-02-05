@@ -24,3 +24,5 @@ tmux/plugins
 
 # Vim minpac
 /vim/pack/minpac/start
+
+bin/jdk*
