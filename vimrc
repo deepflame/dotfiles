@@ -33,7 +33,7 @@ set history=200                " command history size
 set undolevels=1000            " number of undo steps
 
 " color scheme
-set background=light           " tell vim we use a light background
+set background=dark           " tell vim we use a light background
 
 " text indentation (managed by editorconfig)
 set tabstop=4                  " display tab 4 colums wide
