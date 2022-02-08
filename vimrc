@@ -98,9 +98,8 @@ tnoremap <leader><Esc> <C-\><C-n>
 " vim-powered terminal in split window
 "map <Leader>t :term ++close<cr>
 "tmap <Leader>t <c-w>:term ++close<cr>
-nmap <Leader>t :split term://bash<cr>
-nmap <Leader>tl :split term://lazygit<cr>
-tmap <Leader>t <c-w>:term<cr>
+noremap <Leader>t :split term://bash<cr>
+noremap <Leader>tl :split term://lazygit<cr>
 
 " vim-powered terminal in new tab
 nmap <Leader>T :tab term<cr>
