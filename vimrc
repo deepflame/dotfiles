@@ -123,6 +123,7 @@ call plug#begin(data_dir . '/plugins')
 
 source ~/dotfiles/vim-plugins/airline.vim
 source ~/dotfiles/vim-plugins/editorconfig.vim	"
+source ~/dotfiles/vim-plugins/floaterm.vim		" floating terminal
 source ~/dotfiles/vim-plugins/fugitive.vim		" git integration
 source ~/dotfiles/vim-plugins/nerdtree.vim		" tree explorer
 source ~/dotfiles/vim-plugins/polyglot.vim		" collection of language packs
