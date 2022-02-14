@@ -92,22 +92,6 @@ noremap <C-j>  <C-w>j
 noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 
-tnoremap <leader><Esc> <C-\><C-n>
-"	tnoremap <C-Esc> <C-\><C-n>
-
-" vim-powered terminal in split window
-"map <Leader>t :term ++close<cr>
-"tmap <Leader>t <c-w>:term ++close<cr>
-noremap <Leader>t :split term://bash<cr>
-noremap <Leader>tl :split term://lazygit<cr>
-
-" vim-powered terminal in new tab
-nmap <Leader>T :tab term<cr>
-tmap <Leader>T <c-w>:tab term<cr>
-
-
-"	autocmd! BufWritePost .vimrc source $MYVIMRC
-
 "
 " Plugins
 "
