@@ -16,7 +16,6 @@
     ~/.gvimrc: gvimrc
     ~/.irbrc: irbrc
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.zsh: zsh
     ~/.zshrc: zshrc
