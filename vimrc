@@ -79,7 +79,6 @@ set visualbell
 "
 
 let mapleader = "\<space>"
-"let mapleader = ","
 
 " edit vim files
 nmap <leader>ve :edit ~/.vimrc<cr>
@@ -111,11 +110,11 @@ source ~/dotfiles/vim-plugins/floaterm.vim		" floating terminal
 source ~/dotfiles/vim-plugins/fugitive.vim		" git integration
 source ~/dotfiles/vim-plugins/nerdtree.vim		" tree explorer
 source ~/dotfiles/vim-plugins/polyglot.vim		" collection of language packs
-source ~/dotfiles/vim-plugins/solarized.vim		" color scheme
+"source ~/dotfiles/vim-plugins/solarized.vim		" color scheme
 source ~/dotfiles/vim-plugins/surround.vim		" delete/change/add parentheses/quotes/xml-tags/much more with ease
 
 call plug#end()
-doautocmd User PlugLoaded " fire user event
+"doautocmd User PlugLoaded
 
 
 "
