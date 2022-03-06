@@ -6,12 +6,23 @@
     - ~/.config
 
 - link:
+    ~/.bundle/config:
+      create: true
+      path: bundle/config
+    ~/.config/doom: doom
     ~/.config/nvim: nvim
     ~/.config/kitty: kitty
     ~/.editorconfig: editorconfig
+    ~/.gvimrc: gvimrc
+    ~/.irbrc: irbrc
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.zsh: zsh
+    ~/.zshrc: zshrc
+    ~/bin/serve:
+      create: true
+      path: bin/serve
 
 - create:
     - ~/Developer
