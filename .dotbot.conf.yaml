@@ -1,27 +1,25 @@
 - defaults:
     link:
+      create: true
       relink: true
 
-- create:
-    - ~/.config
+- clean: # cleans dead symbolic links
+    - '~'
 
 - link:
-    ~/.bundle/config:
-      create: true
-      path: bundle/config
+    ~/.bundle/config: bundle/config
     ~/.config/doom: doom
     ~/.config/nvim: nvim
     ~/.config/kitty: kitty
-    ~/.editorconfig: editorconfig
-    ~/.gvimrc: gvimrc
-    ~/.irbrc: irbrc
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
-    ~/.zsh: zsh
-    ~/.zshrc: zshrc
-    ~/bin/serve:
-      create: true
-      path: bin/serve
+    ~/.editorconfig:
+    ~/.gvimrc:
+    ~/.irbrc:
+    ~/.tmux.conf:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
+      force: true
+    ~/bin/serve: bin/serve
 
 - create:
     - ~/Developer
