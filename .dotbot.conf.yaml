@@ -1,0 +1,29 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: # cleans dead symbolic links
+    - '~'
+
+- link:
+    ~/.bundle/config: bundle/config
+    ~/.config/doom: doom
+    ~/.config/nvim: nvim
+    ~/.config/kitty: kitty
+    ~/.editorconfig:
+    ~/.gvimrc:
+    ~/.irbrc:
+    ~/.tmux.conf:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
+      force: true
+    ~/bin/serve: bin/serve
+
+- create:
+    - ~/Developer
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["vim +PlugUpdate +PlugClean! +qa", Installing and updating plugins]
