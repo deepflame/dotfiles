@@ -10,7 +10,9 @@
     ~/.bundle/config: bundle/config
     ~/.config/doom: doom
     ~/.config/nvim: nvim
-    ~/.config/kitty: kitty
+    ~/.config/kitty:
+      path: kitty
+      force: true
     ~/.editorconfig:
     ~/.gvimrc:
     ~/.irbrc:
