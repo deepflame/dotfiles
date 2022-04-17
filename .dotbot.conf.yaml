@@ -13,6 +13,9 @@
     ~/.config/kitty:
       path: kitty
       force: true
+    ~/.config/sway:
+      path: sway
+      force: true
     ~/.editorconfig:
     ~/.gvimrc:
     ~/.irbrc:
